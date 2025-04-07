@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Locations - Holy Army Fellowship</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="../src/images/bg/Logo Png.png" type="image/png" />
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link rel="stylesheet" href="../src/css/services.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="site-title">
+        <a href="home-english.html" class="site-logo">
+          <div class="logo-image">
+            <img src="../src/images/bg/Logo Png.png" alt="Holy Army Fellowship Logo" />
+          </div>
+          <h1>Holy Army Fellowship</h1>
+        </a>
+      </div>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <nav class="main-nav">
+      <button class="nav-close" aria-label="Close navigation">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="nav-container">
+        <div class="nav-links">
+          <a href="home-english.html" class="nav-home">
+            <i class="fas fa-home"></i>
+            Home
+          </a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              <i class="fas fa-scroll"></i>
+              About Us
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="chosen-english.html">
+                <i class="fas fa-hand-holding-heart"></i>
+                Chosen by God
+              </a>
+              <a href="origin-english.html">
+                <i class="fas fa-history"></i>
+                Origin of Work
+              </a>
+              <a href="faith-english.html">
+                <i class="fas fa-cross"></i>
+                Statement of Faith
+              </a>
+            </div>
+          </div>
+          
+          <a href="gallery-english.html">
+            <i class="fas fa-images"></i>
+            Gallery
+          </a>
+          <a href="videos-english.html">
+            <i class="fas fa-video"></i>
+            Videos
+          </a>
+          <a href="services-english.html">
+            <i class="fas fa-place-of-worship"></i>
+            Services
+          </a>
+          <a href="books-english.html">
+            <i class="fas fa-book-bible"></i>
+            Books
+          </a>
+          <a href="testimonies-english.html">
+            <i class="fas fa-dove"></i>
+            Testimonies
+          </a>
+          <a href="prayer-request-english.html">
+            <i class="fas fa-praying-hands"></i>
+            Prayer Request
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="locations-main">
+      <section class="locations-hero">
+        <div class="locations-hero-content">
+          <h1>Our Locations</h1>
+          <p>Join us at one of our many locations across Andhra Pradesh and Telangana</p>
+          <div class="locations-stats">
+            <div class="stat-item">
+              <i class="fas fa-church"></i>
+              <span class="stat-number">200+</span>
+              <span class="stat-label">Churches</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-map-marked-alt"></i>
+              <span class="stat-number">10</span>
+              <span class="stat-label">Districts</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-users"></i>
+              <span class="stat-number">10000+</span>
+              <span class="stat-label">Members</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="locations-filters">
+        <button class="region-btn active" data-region="all">All Regions</button>
+        <button class="region-btn" data-region="andhra">Andhra Pradesh</button>
+        <button class="region-btn" data-region="telangana">Telangana</button>
+      </section>
+
+      <!-- Churches Directory -->
+      <div class="directory-container">
+        <h2 class="directory-title">Churches Directory</h2>
+        <div class="directory-divider"></div>
+        <div class="directory-section" data-region="andhra">
+          <h3 class="directory-state-title">Andhra Pradesh</h3>
+          <table class="directory-table">
+            <thead>
+              <tr>
+                <th>District</th>
+                <th>Areas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="district-cell">Krishna District</td>
+                <td>
+                  <div class="areas-cell">
+                    <a href="#" class="area-link" onclick="navigateToChurch('vijayawada')">Vijayawada</a>
+                    <a href="#" class="area-link" onclick="navigateToChurch('machilipatnam')">Machilipatnam</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="district-cell">Guntur District</td>
+                <td>
+                  <div class="areas-cell">
+                    <a href="#" class="area-link" onclick="navigateToChurch('guntur-city')">Guntur City</a>
+                    <a href="#" class="area-link" onclick="navigateToChurch('tenali')">Tenali</a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="directory-section" data-region="telangana">
+          <h3 class="directory-state-title">Telangana</h3>
+          <table class="directory-table">
+            <thead>
+              <tr>
+                <th>District</th>
+                <th>Areas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="district-cell">Hyderabad District</td>
+                <td>
+                  <div class="areas-cell">
+                    <a href="#" class="area-link" onclick="navigateToChurch('secunderabad')">Secunderabad</a>
+                    <a href="#" class="area-link" onclick="navigateToChurch('kukatpally')">Kukatpally</a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="search-container">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search by church name, address, pastor name, or phone number..."
+          id="churchSearch"
+        />
+      </div>
+
+      <div class="no-results">
+        No churches found matching your search criteria
+      </div>
+
+      <section class="district-section" data-region="andhra">
+        <h2 class="state-title">
+          <i class="fas fa-map-marked-alt"></i>
+          Andhra Pradesh
+        </h2>
+
+        <div class="district-container">
+          <div class="district-header">
+            <h3>
+              <i class="fas fa-chevron-down"></i>
+              Krishna District
+            </h3>
+            <span class="church-count">2 Churches</span>
+          </div>
+          <div class="locations-grid">
+            <div class="location-card" data-church-id="vijayawada">
+              <span class="region-label">Krishna</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  HAF Church Vijayawada
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>Pastor John Doe</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>123 Church Street, Vijayawada</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999991</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> Service Times</h4>
+                  <ul>
+                    <li><span>Sunday Worship</span><span>10:00 AM</span></li>
+                    <li><span>Wednesday Prayer</span><span>6:30 PM</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    Contact
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="location-card" data-church-id="machilipatnam">
+              <span class="region-label">Krishna</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  HAF Church Machilipatnam
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>Pastor Jane Smith</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>456 Temple Street, Machilipatnam</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999992</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> Service Times</h4>
+                  <ul>
+                    <li><span>Sunday Worship</span><span>9:30 AM</span></li>
+                    <li><span>Friday Prayer</span><span>7:00 PM</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    Contact
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="district-container">
+          <div class="district-header">
+            <h3>
+              <i class="fas fa-chevron-down"></i>
+              Guntur District
+            </h3>
+            <span class="church-count">2 Churches</span>
+          </div>
+          <div class="locations-grid">
+            <div class="location-card" data-church-id="guntur-city">
+              <span class="region-label">Guntur</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  HAF Church Guntur City
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>Pastor Michael Johnson</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>789 Church Road, Guntur</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999993</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> Service Times</h4>
+                  <ul>
+                    <li><span>Sunday Worship</span><span>10:00 AM</span></li>
+                    <li><span>Thursday Prayer</span><span>6:00 PM</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    Contact
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="location-card" data-church-id="tenali">
+              <span class="region-label">Guntur</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  HAF Church Tenali
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>Pastor Sarah Williams</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>101 Temple Street, Tenali</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999994</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> Service Times</h4>
+                  <ul>
+                    <li><span>Sunday Worship</span><span>9:30 AM</span></li>
+                    <li><span>Wednesday Prayer</span><span>7:00 PM</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    Contact
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="district-section" data-region="telangana">
+        <h2 class="state-title">
+          <i class="fas fa-map-marked-alt"></i>
+          Telangana
+        </h2>
+
+        <div class="district-container">
+          <div class="district-header">
+            <h3>
+              <i class="fas fa-chevron-down"></i>
+              Hyderabad District
+            </h3>
+            <span class="church-count">2 Churches</span>
+          </div>
+          <div class="locations-grid">
+            <div class="location-card" data-church-id="secunderabad">
+              <span class="region-label">Hyderabad</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  HAF Church Secunderabad
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>Pastor David Brown</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>123 Chapel Road, Secunderabad</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999995</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> Service Times</h4>
+                  <ul>
+                    <li><span>Sunday Worship</span><span>10:00 AM</span></li>
+                    <li><span>Tuesday Prayer</span><span>6:30 PM</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    Contact
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="location-card" data-church-id="kukatpally">
+              <span class="region-label">Hyderabad</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  HAF Church Kukatpally
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>Pastor Robert Wilson</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>456 Temple Street, Kukatpally</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999996</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> Service Times</h4>
+                  <ul>
+                    <li><span>Sunday Worship</span><span>9:30 AM</span></li>
+                    <li><span>Friday Prayer</span><span>7:00 PM</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    Contact
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: info@holyarmyfellowship.org</p>
+          <p>Phone: +91 9999999999</p>
+        </div>
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="https://www.youtube.com/@holyarmyfellowship4726"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Our Location</h3>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2903131521607!2d81.15606487460877!3d16.511434927449184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a361874a5c9d229%3A0xb56ba61ede1af540!2sH.A.F%20Church%20Mandavalli!5e0!3m2!1sen!2sin!4v1737304566845!5m2!1sen!2sin"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../src/js/main.js"></script>
+    <script src="../src/js/services.js"></script>
+  </body>
+</html>

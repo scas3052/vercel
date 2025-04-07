@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Support Dashboard - Holy Army Fellowship</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="admin.css" />
+  <link rel="stylesheet" href="admin-support.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <div class="site-title">
+      <h1>Holy Army Fellowship - Support Dashboard</h1>
+    </div>
+    <div class="header-controls">
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <button class="nav-close" aria-label="Close navigation">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="nav-container">
+      <div class="nav-section">
+        <h3>Management</h3>
+        <div class="nav-links">
+          <a href="admin-dashboard.html" class="nav-btn">
+            <i class="fas fa-box"></i>
+            Dashboard
+          </a>
+          <a href="#" class="nav-btn active">
+            <i class="fas fa-headset"></i>
+            Support
+          </a>
+          <a href="analytics.html" class="nav-btn">
+            <i class="fas fa-chart-line"></i>
+            Analytics
+          </a>
+        </div>
+      </div>
+      <div class="nav-section">
+        <div class="nav-links">
+          <button id="logoutBtn" class="admin-logout">
+            <i class="fas fa-sign-out-alt"></i>
+            Logout
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="admin-dashboard">
+    <div class="support-container">
+      <div class="support-sidebar">
+        <div class="sidebar-header">
+          <h3>Conversations</h3>
+          <div class="sidebar-actions">
+            <div class="search-conversations">
+              <input type="text" id="searchConversations" placeholder="Search users...">
+              <button type="button">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <div class="sort-options">
+              <select id="sortConversations">
+                <option value="recent">Recent Activity</option>
+                <option value="unread">Unread Messages</option>
+                <option value="name">Name (A-Z)</option>
+              </select>
+            </div>
+            <div>
+              <label><input type="checkbox" id="showArchived"> Show Archived</label>
+            </div>
+          </div>
+        </div>
+        <div class="conversation-list" id="conversationList">
+          <!-- Conversations will be loaded here -->
+          <div class="loading-spinner-container">
+            <div class="loading-spinner"></div>
+            <p>Loading conversations...</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="chat-window">
+        <div class="empty-state" id="emptyState">
+          <i class="fas fa-comments"></i>
+          <h3>Select a conversation</h3>
+          <p>Choose a conversation from the sidebar to start chatting</p>
+        </div>
+        
+        <div class="chat-interface" id="chatInterface" style="display: none;">
+          <div class="chat-header">
+            <!-- Back button for mobile -->
+            <div class="back-to-conversations" onclick="backToConversations()">
+              <i class="fas fa-arrow-left"></i>
+              Back to conversations
+            </div>
+            
+            <div class="user-info">
+              <h3 id="chatUserName"></h3>
+              <p id="chatUserEmail"></p>
+            </div>
+            <div class="chat-actions">
+              <button id="exportChatBtn" class="export-chat-btn">
+                <i class="fas fa-download"></i>
+                Export Chat
+              </button>
+              <button id="archiveChatBtn" class="archive-chat-btn">
+                <i class="fas fa-archive"></i>
+                Archive
+              </button>
+            </div>
+          </div>
+          <div class="chat-messages" id="chatMessages"></div>
+          
+          <div id="typingIndicator" class="typing-indicator" style="display: none;">
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+            <p>User is typing...</p>
+          </div>
+          
+          <div class="quick-responses">
+            <button class="quick-response-btn" data-response="Thank you for reaching out. How can I help you today?">
+              Greeting
+            </button>
+            <button class="quick-response-btn" data-response="I'll look into this issue right away and get back to you shortly.">
+              Investigating
+            </button>
+            <button class="quick-response-btn" data-response="Your order has been confirmed and will be shipped within 2-3 business days.">
+              Order Status
+            </button>
+            <button class="quick-response-btn" data-response="Is there anything else I can help you with today?">
+              Follow-up
+            </button>
+          </div>
+          
+          <form id="adminChatForm" class="chat-form">
+            <div class="attachment-preview" id="attachmentPreview"></div>
+            <div class="message-input-container">
+              <label for="adminFileAttachment" class="attachment-btn">
+                <i class="fas fa-paperclip"></i>
+              </label>
+              <input type="file" id="adminFileAttachment" accept="image/*,.pdf,.doc,.docx" hidden>
+              <div class="message-input">
+                <input type="text" id="adminMessageInput" placeholder="Type your message...">
+                <button type="submit" id="adminSendButton">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Image Preview Modal -->
+  <div id="imagePreviewModal" class="image-preview-modal">
+    <span class="close-preview">&times;</span>
+    <img id="previewImage" src="" alt="Preview">
+    <a id="downloadLink" href="#" download class="download-btn">
+      <i class="fas fa-download"></i> Download
+    </a>
+  </div>
+
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="admin-support.js"></script>
+</body>
+</html>

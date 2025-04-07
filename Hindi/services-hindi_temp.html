@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <title>हमारी सेवाएं - होली आर्मी फैलोशिप</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="../src/images/bg/Logo Png.png" type="image/png">
+    <link rel="stylesheet" href="../src/css/style.css"/>
+    <link rel="stylesheet" href="../src/css/services.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="site-title">
+        <a style="text-decoration: none;" href="home-hindi.html"><h1>पवित्र सेना संगति</h1></a>
+      </div>
+      <button class="menu-toggle" aria-label="नेविगेशन टॉगल">
+        <i class="fas fa-bars"></i>
+      </button>
+    </header>
+
+    <nav class="main-nav">
+        <button class="nav-close" aria-label="Close navigation">
+            <i class="fas fa-times"></i>
+          </button>
+      <div class="nav-container">
+        <div class="nav-links">
+          <a href="home-hindi.html" class="nav-home">
+            <i class="fas fa-home"></i>
+            होम
+          </a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              <i class="fas fa-scroll"></i>
+              हमारे बारे में 
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="chosen-hindi.html">
+                <i class="fas fa-hand-holding-heart"></i>
+                भगवान द्वारा चुने गए
+              </a>
+              <a href="origin-hindi.html">
+                <i class="fas fa-history"></i>
+                कार्य की उत्पत्ति
+              </a>
+              <a href="faith-hindi.html">
+                <i class="fas fa-cross"></i>
+                विश्वास का वक्तव्य
+              </a>
+            </div>
+          </div>
+          
+          <a href="gallery-hindi.html">
+            <i class="fas fa-images"></i>
+            गैलरी
+          </a>
+          <a href="services-hindi.html">
+            <i class="fas fa-place-of-worship"></i>
+            सेवाएं
+          </a>
+          <a href="books-hindi.html">
+            <i class="fas fa-book-bible"></i>
+            पुस्तकें
+          </a>
+          <a href="testimonies-hindi.html">
+            <i class="fas fa-dove"></i>
+            गवाहियां
+          </a>
+          <a href="prayer-request-hindi.html">
+            <i class="fas fa-praying-hands"></i>
+            प्रार्थना अनुरोध
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="services-main">
+      <section class="services-hero">
+        <div class="services-hero-content">
+          <h1>हमारी सेवाएं</h1>
+          <p>आंध्र प्रदेश भर में आराधना में हमारे साथ जुड़ें</p>
+        </div>
+      </section>
+
+      <section class="services-content">
+        <div class="state-container">
+          <div class="state-header">
+            <h2>आंध्र प्रदेश</h2>
+            <p>सेवा स्थानों को देखने के लिए एक जिला चुनें</p>
+          </div>
+
+          <div class="search-section">
+            <div class="search-container">
+              <i class="fas fa-search search-icon"></i>
+              <input 
+                type="text" 
+                id="serviceSearch" 
+                placeholder="चर्च का नाम, पास्टर या फोन नंबर द्वारा खोजें..."
+                onkeyup="searchServices()"
+              >
+              <button class="search-clear" onclick="clearSearch()">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="search-results" id="searchResults"></div>
+          </div>
+          
+          <div class="districts-grid" id="districtsGrid">
+            <div class="district-card" data-district="अनंतपुर">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>अनंतपुर जिला</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>चर्च और संपर्क</th>
+                        <th>सेवा समय</th>
+                        <th>स्थान</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="haf church anantapur pastor samuel 9876543213">
+                        <td>
+                          <strong>एचएएफ चर्च अनंतपुर</strong><br>
+                          पास्टर सैमुएल<br>
+                          +91 9876543213
+                        </td>
+                        <td>
+                          रविवार: सुबह 9:00 बजे<br>
+                          बुधवार: शाम 7:00 बजे<br>
+                          शुक्रवार: शाम 6:30 बजे
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            मानचित्र देखें
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="district-card" data-district="पूर्वी गोदावरी">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>पूर्वी गोदावरी जिला</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>चर्च और संपर्क</th>
+                        <th>सेवा समय</th>
+                        <th>स्थान</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="haf church rajahmundry pastor joseph 9876543214">
+                        <td>
+                          <strong>एचएएफ चर्च राजमुंदरी</strong><br>
+                          पास्टर जोसेफ<br>
+                          +91 9876543214
+                        </td>
+                        <td>
+                          रविवार: सुबह 10:30 बजे<br>
+                          मंगलवार: शाम 6:30 बजे<br>
+                          गुरुवार: शाम 7:00 बजे
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            मानचित्र देखें
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="district-card" data-district="गुंटूर">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>गुंटूर जिला</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>चर्च और संपर्क</th>
+                        <th>सेवा समय</th>
+                        <th>स्थान</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="haf church guntur pastor david 9876543211">
+                        <td>
+                          <strong>एचएएफ चर्च गुंटूर</strong><br>
+                          पास्टर डेविड<br>
+                          +91 9876543211
+                        </td>
+                        <td>
+                          रविवार: सुबह 9:30 बजे<br>
+                          मंगलवार: शाम 6:00 बजे<br>
+                          गुरुवार: शाम 7:00 बजे
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            मानचित्र देखें
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="district-card" data-district="कृष्णा">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>कृष्णा जिला</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>चर्च और संपर्क</th>
+                        <th>सेवा समय</th>
+                        <th>स्थान</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="haf church mandavalli pastor john 9876543210">
+                        <td>
+                          <strong>एचएएफ चर्च मंडवल्ली</strong><br>
+                          पास्टर जॉन<br>
+                          +91 9876543210
+                        </td>
+                        <td>
+                          रविवार: सुबह 10:00 बजे<br>
+                          बुधवार: शाम 6:30 बजे<br>
+                          शुक्रवार: शाम 7:00 बजे
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            मानचित्र देखें
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="district-card" data-district="प्रकाशम">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>प्रकाशम जिला</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>चर्च और संपर्क</th>
+                        <th>सेवा समय</th>
+                        <th>स्थान</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="haf church ongole pastor thomas 9876543215">
+                        <td>
+                          <strong>एचएएफ चर्च ओंगोल</strong><br>
+                          पास्टर थॉमस<br>
+                          +91 9876543215
+                        </td>
+                        <td>
+                          रविवार: सुबह 10:00 बजे<br>
+                          सोमवार: शाम 7:00 बजे<br>
+                          शनिवार: शाम 6:30 बजे
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            मानचित्र देखें
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="district-card" data-district="विशाखापट्टनम">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>विशाखापट्टनम जिला</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>चर्च और संपर्क</th>
+                        <th>सेवा समय</th>
+                        <th>स्थान</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="haf church vizag pastor peter 9876543216">
+                        <td>
+                          <strong>एचएएफ चर्च विशाखापट्टनम</strong><br>
+                          पास्टर पीटर<br>
+                          +91 9876543216
+                        </td>
+                        <td>
+                          रविवार: सुबह 9:00 बजे<br>
+                          बुधवार: शाम 7:00 बजे<br>
+                          शुक्रवार: शाम 6:00 बजे
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            मानचित्र देखें
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>संपर्क करें</h3>
+          <p>ईमेल: info@holyarmyfellowship.org</p>
+          <p>फोन: +91 9999999999</p>
+        </div>
+        <div class="footer-section">
+          <h3>हमसे जुड़ें</h3>
+          <div class="social-links">
+            <a href="https://www.youtube.com/@holyarmyfellowship4726"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>हमारा स्थान</h3>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2903131521607!2d81.15606487460877!3d16.511434927449184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a361874a5c9d229%3A0xb56ba61ede1af540!2sH.A.F%20Church%20Mandavalli!5e0!3m2!1sen!2sin!4v1737304566845!5m2!1sen!2sin" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../src/js/main.js"></script>
+    <script>
+      function toggleDistrict(header) {
+        const card = header.parentElement;
+        const content = card.querySelector('.district-content');
+        const icon = header.querySelector('.fa-chevron-down');
+        
+        document.querySelectorAll('.district-card').forEach(otherCard => {
+          if (otherCard !== card && otherCard.classList.contains('active')) {
+            otherCard.classList.remove('active');
+            otherCard.querySelector('.fa-chevron-down').style.transform = 'rotate(0deg)';
+          }
+        });
+
+        card.classList.toggle('active');
+        icon.style.transform = card.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+      }
+
+      function searchServices() {
+        const searchInput = document.getElementById('serviceSearch');
+        const searchTerm = searchInput.value.toLowerCase();
+        const districtsGrid = document.getElementById('districtsGrid');
+        const searchResults = document.getElementById('searchResults');
+        
+        if (searchTerm.length === 0) {
+          districtsGrid.style.display = 'grid';
+          searchResults.style.display = 'none';
+          return;
+        }
+
+        const allRows = document.querySelectorAll('tr[data-search]');
+        const matchingRows = [];
+
+        allRows.forEach(row => {
+          const searchData = row.getAttribute('data-search').toLowerCase();
+          if (searchData.includes(searchTerm)) {
+            const district = row.closest('.district-card').getAttribute('data-district');
+            const rowClone = row.cloneNode(true);
+            matchingRows.push({ district, element: rowClone });
+          }
+        });
+
+        if (matchingRows.length > 0) {
+          districtsGrid.style.display = 'none';
+          searchResults.style.display = 'block';
+          searchResults.innerHTML = `
+            <div class="search-results-header">
+              <h3>खोज परिणाम (${matchingRows.length})</h3>
+            </div>
+            <div class="service-table-container">
+              <table class="service-table">
+                <thead>
+                  <tr>
+                    <th>जिला</th>
+                    <th>चर्च और संपर्क</th>
+                    <th>सेवा समय</th>
+                    <th>स्थान</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${matchingRows.map(({ district, element }) => `
+                    <tr>
+                      <td>${district}</td>
+                      ${element.innerHTML}
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          `;
+        } else {
+          searchResults.innerHTML = `
+            <div class="no-results">
+              <i class="fas fa-search"></i>
+              <p>"${searchTerm}" से मेल खाने वाला कोई चर्च नहीं मिला</p>
+            </div>
+          `;
+        }
+      }
+
+      function clearSearch() {
+        const searchInput = document.getElementById('serviceSearch');
+        const districtsGrid = document.getElementById('districtsGrid');
+        const searchResults = document.getElementById('searchResults');
+        
+        searchInput.value = '';
+        districtsGrid.style.display = 'grid';
+        searchResults.style.display = 'none';
+      }
+    </script>
+  </body>
+</html>

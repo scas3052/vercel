@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="te">
+  <head>
+    <title>మా సేవలు - పరిశుద్ధ సైనిక సహవాసం</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="../src/images/bg/Logo Png.png" type="image/png">
+    <link rel="stylesheet" href="../src/css/style.css"/>
+    <link rel="stylesheet" href="../src/css/services.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="site-title">
+        <a style="text-decoration: none;" href="home-telugu.html"><h1>పరిశుద్ధ సైనిక సహవాసం</h1></a>
+      </div>
+      <button class="menu-toggle" aria-label="నావిగేషన్ టోగుల్">
+        <i class="fas fa-bars"></i>
+      </button>
+    </header>
+
+    <nav class="main-nav">
+        <button class="nav-close" aria-label="Close navigation">
+            <i class="fas fa-times"></i>
+          </button>
+      <div class="nav-container">
+        <div class="nav-links">
+          <a href="home-telugu.html" class="nav-home">
+            <i class="fas fa-home"></i>
+            హోమ్
+          </a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              <i class="fas fa-scroll"></i>
+              మా గురించి 
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="chosen-telugu.html">
+                <i class="fas fa-hand-holding-heart"></i>
+                దేవునిచే ఎంచుకోబడిన
+              </a>
+              <a href="origin-telugu.html">
+                <i class="fas fa-history"></i>
+                పని యొక్క మూలం
+              </a>
+              <a href="faith-telugu.html">
+                <i class="fas fa-cross"></i>
+                విశ్వాస ప్రకటన
+              </a>
+            </div>
+          </div>
+          
+          <a href="gallery-telugu.html">
+            <i class="fas fa-images"></i>
+            గ్యాలరీ
+          </a>
+          <a href="services-telugu.html">
+            <i class="fas fa-place-of-worship"></i>
+            సేవలు
+          </a>
+          <a href="books-telugu.html">
+            <i class="fas fa-book-bible"></i>
+            పుస్తకాలు
+          </a>
+          <a href="testimonies-telugu.html">
+            <i class="fas fa-dove"></i>
+            సాక్ష్యాలు
+          </a>
+          <a href="prayer-request-telugu.html">
+            <i class="fas fa-praying-hands"></i>
+            ప్రార్థన అభ్యర్థన
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="services-main">
+      <section class="services-hero">
+        <div class="services-hero-content">
+          <h1>మా సేవలు</h1>
+          <p>ఆంధ్రప్రదేశ్ అంతటా ఆరాధనలో పాల్గొనండి</p>
+        </div>
+      </section>
+
+      <section class="services-content">
+        <div class="state-container">
+          <div class="state-header">
+            <h2>ఆంధ్రప్రదేశ్</h2>
+            <p>సేవా స్థలాలను చూడటానికి జిల్లాను ఎంచుకోండి</p>
+          </div>
+
+          <!-- Search Section -->
+          <div class="search-section">
+            <div class="search-container">
+              <i class="fas fa-search search-icon"></i>
+              <input 
+                type="text" 
+                id="serviceSearch" 
+                placeholder="చర్చి పేరు, పాస్టర్, లేదా ఫోన్ నంబర్ ద్వారా శోధించండి..."
+                onkeyup="searchServices()"
+              >
+              <button class="search-clear" onclick="clearSearch()">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="search-results" id="searchResults"></div>
+          </div>
+          
+          <div class="districts-grid" id="districtsGrid">
+            <!-- Anantapur District -->
+            <div class="district-card" data-district="అనంతపురం">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>అనంతపురం జిల్లా</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>చర్చి & సంప్రదింపులు</th>
+                        <th>సేవా సమయాలు</th>
+                        <th>స్థానం</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="హెచ్.ఎ.ఎఫ్ చర్చి అనంతపురం పాస్టర్ శామ్యూల్ 9876543213">
+                        <td>
+                          <strong>హెచ్.ఎ.ఎఫ్ చర్చి అనంతపురం</strong><br>
+                          పాస్టర్ శామ్యూల్<br>
+                          +91 9876543213
+                        </td>
+                        <td>
+                          ఆదివారం: ఉదయం 9:00<br>
+                          బుధవారం: సాయంత్రం 7:00<br>
+                          శుక్రవారం: సాయంత్రం 6:30
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            మ్యాప్ చూడండి
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- East Godavari District -->
+            <div class="district-card" data-district="తూర్పు గోదావరి">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>తూర్పు గోదావరి జిల్లా</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>చర్చి & సంప్రదింపులు</th>
+                        <th>సేవా సమయాలు</th>
+                        <th>స్థానం</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="హెచ్.ఎ.ఎఫ్ చర్చి రాజమండ్రి పాస్టర్ జోసెఫ్ 9876543214">
+                        <td>
+                          <strong>హెచ్.ఎ.ఎఫ్ చర్చి రాజమండ్రి</strong><br>
+                          పాస్టర్ జోసెఫ్<br>
+                          +91 9876543214
+                        </td>
+                        <td>
+                          ఆదివారం: ఉదయం 10:30<br>
+                          మంగళవారం: సాయంత్రం 6:30<br>
+                          గురువారం: సాయంత్రం 7:00
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            మ్యాప్ చూడండి
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Guntur District -->
+            <div class="district-card" data-district="గుంటూరు">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>గుంటూరు జిల్లా</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>చర్చి & సంప్రదింపులు</th>
+                        <th>సేవా సమయాలు</th>
+                        <th>స్థానం</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="హెచ్.ఎ.ఎఫ్ చర్చి గుంటూరు పాస్టర్ డేవిడ్ 9876543211">
+                        <td>
+                          <strong>హెచ్.ఎ.ఎఫ్ చర్చి గుంటూరు</strong><br>
+                          పాస్టర్ డేవిడ్<br>
+                          +91 9876543211
+                        </td>
+                        <td>
+                          ఆదివారం: ఉదయం 9:30<br>
+                          మంగళవారం: సాయంత్రం 6:00<br>
+                          గురువారం: సాయంత్రం 7:00
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            మ్యాప్ చూడండి
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Krishna District -->
+            <div class="district-card" data-district="కృష్ణ">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>కృష్ణ జిల్లా</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>చర్చి & సంప్రదింపులు</th>
+                        <th>సేవా సమయాలు</th>
+                        <th>స్థానం</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="హెచ్.ఎ.ఎఫ్ చర్చి మండవల్లి పాస్టర్ జాన్ 9876543210">
+                        <td>
+                          <strong>హెచ్.ఎ.ఎఫ్ చర్చి మండవల్లి</strong><br>
+                          పాస్టర్ జాన్<br>
+                          +91 9876543210
+                        </td>
+                        <td>
+                          ఆదివారం: ఉదయం 10:00<br>
+                          బుధవారం: సాయంత్రం 6:30<br>
+                          శుక్రవారం: సాయంత్రం 7:00
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            మ్యాప్ చూడండి
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Prakasam District -->
+            <div class="district-card" data-district="ప్రకాశం">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>ప్రకాశం జిల్లా</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>చర్చి & సంప్రదింపులు</th>
+                        <th>సేవా సమయాలు</th>
+                        <th>స్థానం</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="హెచ్.ఎ.ఎఫ్ చర్చి ఒంగోలు పాస్టర్ థామస్ 9876543215">
+                        <td>
+                          <strong>హెచ్.ఎ.ఎఫ్ చర్చి ఒంగోలు</strong><br>
+                          పాస్టర్ థామస్<br>
+                          +91 9876543215
+                        </td>
+                        <td>
+                          ఆదివారం: ఉదయం 10:00<br>
+                          సోమవారం: సాయంత్రం 7:00<br>
+                          శనివారం: సాయంత్రం 6:30
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            మ్యాప్ చూడండి
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Visakhapatnam District -->
+            <div class="district-card" data-district="విశాఖపట్నం">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>విశాఖపట్నం జిల్లా</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>చర్చి & సంప్రదింపులు</th>
+                        <th>సేవా సమయాలు</th>
+                        <th>స్థానం</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="హెచ్.ఎ.ఎఫ్ చర్చి విశాఖపట్నం పాస్టర్ పీటర్ 9876543216">
+                        <td>
+                          <strong>హెచ్.ఎ.ఎఫ్ చర్చి విశాఖపట్నం</strong><br>
+                          పాస్టర్ పీటర్<br>
+                          +91 9876543216
+                        </td>
+                        <td>
+                          ఆదివారం: ఉదయం 9:00<br>
+                          బుధవారం: సాయంత్రం 7:00<br>
+                          శుక్రవారం: సాయంత్రం 6:00
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            మ్యాప్ చూడండి
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>సంప్రదించండి</h3>
+          <p>ఇమెయిల్: info@holyarmyfellowship.org</p>
+          <p>ఫోన్: +91 9999999999</p>
+        </div>
+        <div class="footer-section">
+          <h3>మాతో అనుసంధానం అవ్వండి</h3>
+          <div class="social-links">
+            <a href="https://www.youtube.com/@holyarmyfellowship4726"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>మా స్థానం</h3>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2903131521607!2d81.15606487460877!3d16.511434927449184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a361874a5c9d229%3A0xb56ba61ede1af540!2sH.A.F%20Church%20Mandavalli!5e0!3m2!1sen!2sin!4v1737304566845!5m2!1sen!2sin" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../src/js/main.js"></script>
+    <script>
+      function toggleDistrict(header) {
+        const card = header.parentElement;
+        const content = card.querySelector('.district-content');
+        const icon = header.querySelector('.fa-chevron-down');
+        
+        // Close all other districts
+        document.querySelectorAll('.district-card').forEach(otherCard => {
+          if (otherCard !== card && otherCard.classList.contains('active')) {
+            otherCard.classList.remove('active');
+            otherCard.querySelector('.fa-chevron-down').style.transform = 'rotate(0deg)';
+          }
+        });
+
+        // Toggle current district
+        card.classList.toggle('active');
+        icon.style.transform = card.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+      }
+
+      function searchServices() {
+        const searchInput = document.getElementById('serviceSearch');
+        const searchTerm = searchInput.value.toLowerCase();
+        const districtsGrid = document.getElementById('districtsGrid');
+        const searchResults = document.getElementById('searchResults');
+        
+        if (searchTerm.length === 0) {
+          districtsGrid.style.display = 'grid';
+          searchResults.style.display = 'none';
+          return;
+        }
+
+        const allRows = document.querySelectorAll('tr[data-search]');
+        const matchingRows = [];
+
+        allRows.forEach(row => {
+          const searchData = row.getAttribute('data-search').toLowerCase();
+          if (searchData.includes(searchTerm)) {
+            const district = row.closest('.district-card').getAttribute('data-district');
+            const rowClone = row.cloneNode(true);
+            matchingRows.push({ district, element: rowClone });
+          }
+        });
+
+        if (matchingRows.length > 0) {
+          districtsGrid.style.display = 'none';
+          searchResults.style.display = 'block';
+          searchResults.innerHTML = `
+            <div class="search-results-header">
+              <h3>శోధన ఫలితాలు (${matchingRows.length})</h3>
+            </div>
+            <div class="service-table-container">
+              <table class="service-table">
+                <thead>
+                  <tr>
+                    <th>జిల్లా</th>
+                    <th>చర్చి & సంప్రదింపులు</th>
+                    <th>సేవా సమయాలు</th>
+                    <th>స్థానం</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${matchingRows.map(({ district, element }) => `
+                    <tr>
+                      <td>${district}</td>
+                      ${element.innerHTML}
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          `;
+        } else {
+          searchResults.innerHTML = `
+            <div class="no-results">
+              <i class="fas fa-search"></i>
+              <p>"${searchTerm}" తో సరిపోలే చర్చిలు కనుగొనబడలేదు</p>
+            </div>
+          `;
+        }
+      }
+
+      function clearSearch() {
+        const searchInput = document.getElementById('serviceSearch');
+        const districtsGrid = document.getElementById('districtsGrid');
+        const searchResults = document.getElementById('searchResults');
+        
+        searchInput.value = '';
+        districtsGrid.style.display = 'grid';
+        searchResults.style.display = 'none';
+      }
+    </script>
+  </body>
+</html>

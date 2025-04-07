@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ta">
+  <head>
+    <title>காட்சியகம் - புனித ராணுவ ஐக்கியம்</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="../src/images/bg/Logo Png.png" type="image/png">
+    <link rel="stylesheet" href="../src/css/style.css"/>
+    <link rel="stylesheet" href="../src/css/gallery.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="site-title">
+        <a style="text-decoration: none;" href="home-tamil.html"><h1>புனித ராணுவ ஐக்கியம்</h1></a>
+      </div>
+        <button class="menu-toggle" aria-label="வழிசெலுத்தல் டாகிள்">
+          <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <nav class="main-nav">
+      <button class="nav-close" aria-label="வழிசெலுத்தலை மூடு">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="nav-container">
+        <div class="nav-links">
+          <a href="home-tamil.html" class="nav-home">
+            <i class="fas fa-home"></i>
+            முகப்பு
+          </a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              <i class="fas fa-scroll"></i>
+              எங்களைப் பற்றி 
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="chosen-tamil.html">
+                <i class="fas fa-hand-holding-heart"></i>
+                தேவனால் தேர்ந்தெடுக்கப்பட்டவர்
+              </a>
+              <a href="origin-tamil.html">
+                <i class="fas fa-history"></i>
+                வேலையின் தோற்றம்
+              </a>
+              <a href="faith-tamil.html">
+                <i class="fas fa-cross"></i>
+                விசுவாச அறிக்கை
+              </a>
+            </div>
+          </div>
+          
+          <a href="gallery-tamil.html">
+            <i class="fas fa-images"></i>
+            காட்சியகம்
+          </a>
+          <a href="services-tamil.html">
+            <i class="fas fa-place-of-worship"></i>
+            சேவைகள்
+          </a>
+          <a href="books-tamil.html">
+            <i class="fas fa-book-bible"></i>
+            புத்தகங்கள்
+          </a>
+          <a href="testimonies-tamil.html">
+            <i class="fas fa-dove"></i>
+            சாட்சிகள்
+          </a>
+          <a href="prayer-request-tamil.html">
+            <i class="fas fa-praying-hands"></i>
+            ஜெப வேண்டுகோள்
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="gallery-main">
+      <section class="gallery-hero">
+        <div class="gallery-hero-content">
+          <h1>படங்களில் எங்கள் பயணம்</h1>
+          <p>வழிபாடு, ஐக்கியம் மற்றும் சேவையின் தருணங்களை பதிவு செய்தல்</p>
+        </div>
+      </section>
+
+      <section class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">அனைத்தும்</button>
+        <button class="filter-btn" data-filter="worship">வழிபாடு</button>
+        <button class="filter-btn" data-filter="events">நிகழ்வுகள்</button>
+        <button class="filter-btn" data-filter="community">சமூகம்</button>
+      </section>
+
+      <section class="gallery-grid">
+        <!-- Worship Images -->
+        <div class="gallery-item" data-category="worship">
+          <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80" alt="ஞாயிறு வழிபாட்டு சேவை">
+          <div class="gallery-overlay">
+            <h3>ஞாயிறு வழிபாட்டு சேவை</h3>
+            <p>எங்கள் ஞாயிறு சேவையின் போது துதி மற்றும் வழிபாட்டின் தருணம்</p>
+            <button class="view-btn" onclick="openLightbox(this)">
+              <i class="fas fa-expand"></i>
+              காண்க
+            </button>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="worship">
+          <img src="https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&q=80" alt="ஜெப கூட்டம்">
+          <div class="gallery-overlay">
+            <h3>ஜெப கூட்டம்</h3>
+            <p>வார கூட்டத்தில் ஜெபத்தில் ஒன்றிணைந்து</p>
+            <button class="view-btn" onclick="openLightbox(this)">
+              <i class="fas fa-expand"></i>
+              காண்க
+            </button>
+          </div>
+        </div>
+
+        <!-- Events Images -->
+        <div class="gallery-item" data-category="events">
+          <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80" alt="கிறிஸ்துமஸ் கொண்டாட்டம்">
+          <div class="gallery-overlay">
+            <h3>கிறிஸ்துமஸ் கொண்டாட்டம்</h3>
+            <p>நமது இரட்சகரின் பிறப்பைக் கொண்டாடுதல்</p>
+            <button class="view-btn" onclick="openLightbox(this)">
+              <i class="fas fa-expand"></i>
+              காண்க
+            </button>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="events">
+          <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80" alt="இளைஞர் மாநாடு">
+          <div class="gallery-overlay">
+            <h3>இளைஞர் மாநாடு</h3>
+            <p>அடுத்த தலைமுறையை வலுப்படுத்துதல்</p>
+            <button class="view-btn" onclick="openLightbox(this)">
+              <i class="fas fa-expand"></i>
+              காண்க
+            </button>
+          </div>
+        </div>
+
+        <!-- Community Images -->
+        <div class="gallery-item" data-category="community">
+          <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80" alt="சமூக சேவை">
+          <div class="gallery-overlay">
+            <h3>சமூக சேவை</h3>
+            <p>நமது உள்ளூர் சமூகத்திற்கு அன்புடன் சேவை செய்தல்</p>
+            <button class="view-btn" onclick="openLightbox(this)">
+              <i class="fas fa-expand"></i>
+              காண்க
+            </button>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="community">
+          <img src="https://images.unsplash.com/photo-1523803326055-13445f07c8c9?auto=format&fit=crop&q=80" alt="ஐக்கிய கூட்டம்">
+          <div class="gallery-overlay">
+            <h3>ஐக்கிய கூட்டம்</h3>
+            <p>கிறிஸ்துவில் உறவுகளை கட்டியெழுப்புதல்</p>
+            <button class="view-btn" onclick="openLightbox(this)">
+              <i class="fas fa-expand"></i>
+              காண்க
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <button class="close-lightbox" onclick="closeLightbox()">
+        <i class="fas fa-times"></i>
+      </button>
+      <img id="lightbox-img" src="" alt="">
+      <div class="lightbox-caption">
+        <h3 id="lightbox-title"></h3>
+        <p id="lightbox-description"></p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>தொடர்பு கொள்ள</h3>
+          <p>மின்னஞ்சல்: info@holyarmyfellowship.org</p>
+          <p>தொலைபேசி: +91 9999999999</p>
+        </div>
+        <div class="footer-section">
+          <h3>எங்களுடன் இணையுங்கள்</h3>
+          <div class="social-links">
+            <a href="https://www.youtube.com/@holyarmyfellowship4726"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>எங்கள் இடம்</h3>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2903131521607!2d81.15606487460877!3d16.511434927449184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a361874a5c9d229%3A0xb56ba61ede1af540!2sH.A.F%20Church%20Mandavalli!5e0!3m2!1sen!2sin!4v1737304566845!5m2!1sen!2sin" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../src/js/main.js"></script>
+    <script src="../src/js/gallery.js"></script>
+  </body>
+</html>

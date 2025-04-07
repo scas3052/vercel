@@ -1,0 +1,446 @@
+/* Chosen Page Styles */
+.chosen-main {
+  padding-top: 8rem;
+  min-height: calc(100vh - 300px);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* About Section */
+.about {
+  background: linear-gradient(to right, rgba(44, 74, 124, 0.02), rgba(44, 74, 124, 0.05));
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 3rem;
+}
+
+.image-container {
+  flex: 0 0 400px;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+  transform: scale(1.02);
+}
+
+.about-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-family: 'Cinzel', serif;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  color: #4a5568;
+  line-height: 1.8;
+}
+
+/* Audio Player Styles */
+.audio-container {
+  margin: 0 0 1.5rem 0;
+  padding: 0.75rem;
+  background: rgba(44, 74, 124, 0.03);
+  border-radius: 0 0 8px 8px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(44, 74, 124, 0.1);
+  border-top: none;
+  background: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.audio-container:hover {
+  background: rgba(44, 74, 124, 0.02);
+}
+
+.audio-player {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+}
+
+.audio-play-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(44, 74, 124, 0.2);
+  flex-shrink: 0;
+}
+
+.audio-play-btn:hover {
+  background: var(--secondary-color);
+  transform: scale(1.1);
+}
+
+.audio-play-btn i {
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.audio-progress {
+  flex-grow: 1;
+  height: 4px;
+  background: rgba(44, 74, 124, 0.1);
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.audio-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--primary-color);
+  transition: width 0.1s linear;
+}
+
+.audio-time {
+  font-size: 0.85rem;
+  color: var(--primary-color);
+  font-family: 'Cinzel', serif;
+  min-width: 60px;
+  text-align: center;
+}
+
+.audio-container.playing .audio-play-btn {
+  background: var(--secondary-color);
+}
+
+.audio-container.playing .audio-play-btn i {
+  transform: scale(0.9);
+}
+
+/* Testimony Section */
+.testimony {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimony h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 3rem;
+  font-family: 'Cinzel', serif;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.testimony h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+/* Chapters Container */
+.chapters-container {
+  position: relative;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Chapter Styles */
+.chapter {
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  background: white;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(44, 74, 124, 0.1);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.chapter-header {
+  padding: 1.5rem 2rem;
+  background: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.chapter-header:hover {
+  background: #3c5a8c;
+  transform: translateX(5px);
+}
+
+.chapter-header h2 {
+  margin: 0;
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  color: white;
+  position: relative;
+}
+
+.chapter-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.chapter-header:hover h2::after,
+.chapter.active .chapter-header h2::after {
+  transform: scaleX(1);
+}
+
+.chapter-header i {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  transition: transform 0.3s ease;
+}
+
+.chapter.active .chapter-header i.fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+.chapter-content {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  background: white;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.chapter.active .chapter-content {
+  max-height: none;
+}
+
+.chapter-inner {
+  padding: 2rem;
+  background: #EEF2F7;
+}
+
+.chapter-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.chapter-text p {
+  margin: 0;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  padding: 1.5rem;
+  border-radius: 8px 8px 0 0;
+  transition: all 0.3s ease;
+  color: #4a5568;
+  background: #FFFFFF;
+  border: 1px solid rgba(44, 74, 124, 0.1);
+  border-bottom: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.chapter-text p::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--primary-color);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+  transform-origin: top;
+}
+
+.chapter-text p:hover {
+  transform: translateX(5px);
+}
+
+.chapter-text p:hover::before {
+  transform: scaleY(1);
+}
+
+/* When hovering over the paragraph or audio container, highlight both */
+.chapter-text p:hover + .audio-container,
+.audio-container:hover {
+  background: rgba(44, 74, 124, 0.02);
+}
+
+.chapter-text p:hover + .audio-container {
+  transform: translateX(5px);
+}
+
+/* Chapter Animation and Stacking */
+.chapter {
+  transform-origin: top;
+  transition: all 0.3s ease;
+}
+
+.chapter.active {
+  position: relative;
+  z-index: 10;
+}
+
+.chapter.active .chapter-content {
+  position: relative;
+  z-index: 1;
+}
+
+.chapter.active ~ .chapter {
+  margin-top: 1.5rem;
+  transform: translateY(10px);
+}
+
+/* Ensure consistent animation for all chapters */
+.chapter:nth-child(n) {
+  transform-origin: top;
+  transition: all 0.3s ease;
+}
+
+.chapter:nth-child(n).active {
+  position: relative;
+  z-index: 10;
+}
+
+.chapter:nth-child(n).active .chapter-content {
+  position: relative;
+  z-index: 1;
+}
+
+.chapter:nth-child(n).active ~ .chapter {
+  margin-top: 1.5rem;
+  transform: translateY(10px);
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .chosen-main {
+    overflow-x: hidden;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .about {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .image-container {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .about-text {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .testimony {
+    padding: 2rem 1rem;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .testimony h2 {
+    font-size: 2.2rem;
+    padding: 0 1rem;
+  }
+
+  .chapters-container {
+    width: 100%;
+    padding: 1rem;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .chapter {
+    width: 100%;
+    margin: 0 auto 1.5rem auto;
+  }
+
+  .chapter-header {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .chapter-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .chapter-inner {
+    padding: 1rem;
+  }
+
+  .chapter-text p {
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 0 auto 1rem auto;
+    width: 100%;
+    text-align: left;
+  }
+}

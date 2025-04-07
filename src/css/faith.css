@@ -1,0 +1,409 @@
+/* Faith Page Styles */
+.faith-main {
+  padding-top: 8rem;
+  min-height: calc(100vh - 300px);
+}
+
+.faith-hero {
+  background: linear-gradient(to right, rgba(44, 74, 124, 0.05), rgba(44, 74, 124, 0.1));
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.faith-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faith-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Cinzel', serif;
+  color: var(--primary-color);
+}
+
+.faith-hero p {
+  font-size: 1.2rem;
+  color: #4a5568;
+}
+
+.faith-content {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Spotlight (Repentance) Section */
+.belief-spotlight {
+  position: relative;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  max-width: 1200px;
+}
+
+.belief-spotlight::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+}
+
+.belief-spotlight-content {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.98));
+  border-radius: 30px;
+  padding: 3rem;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(44, 74, 124, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.belief-spotlight-icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 2rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.belief-spotlight-icon::before,
+.belief-spotlight-icon::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  animation: pulse 3s infinite;
+}
+
+.belief-spotlight-icon::before {
+  inset: -15px;
+  border: 2px solid var(--secondary-color);
+  opacity: 0.5;
+}
+
+.belief-spotlight-icon::after {
+  inset: -30px;
+  border: 2px solid var(--primary-color);
+  opacity: 0.3;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 0.2; }
+  100% { transform: scale(1); opacity: 0.5; }
+}
+
+.belief-spotlight-icon i {
+  font-size: 3rem;
+  color: white;
+}
+
+.belief-spotlight h2 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-family: 'Cinzel', serif;
+  position: relative;
+  display: inline-block;
+}
+
+.belief-spotlight h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.belief-spotlight p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #4a5568;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.scripture-highlight {
+  background: linear-gradient(135deg, rgba(44, 74, 124, 0.05), rgba(255, 193, 7, 0.05));
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  border-left: 4px solid var(--secondary-color);
+}
+
+.scripture-highlight q {
+  font-style: italic;
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  line-height: 1.8;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.scripture-highlight cite {
+  color: var(--secondary-color);
+  font-weight: 600;
+  display: block;
+  text-align: right;
+}
+
+/* Beliefs Flow Section */
+.beliefs-flow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.belief-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.98));
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(44, 74, 124, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.belief-item:nth-child(1) { animation-delay: 0.1s; }
+.belief-item:nth-child(2) { animation-delay: 0.2s; }
+.belief-item:nth-child(3) { animation-delay: 0.3s; }
+.belief-item:nth-child(4) { animation-delay: 0.4s; }
+.belief-item:nth-child(5) { animation-delay: 0.5s; }
+.belief-item:nth-child(6) { animation-delay: 0.6s; }
+.belief-item:nth-child(7) { animation-delay: 0.7s; }
+.belief-item:nth-child(8) { animation-delay: 0.8s; }
+
+.belief-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(44, 74, 124, 0.05), rgba(255, 193, 7, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.belief-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(44, 74, 124, 0.15);
+}
+
+.belief-item:hover::before {
+  opacity: 1;
+}
+
+.belief-icon {
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.belief-icon i {
+  font-size: 1.8rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.belief-text {
+  flex: 1;
+}
+
+.belief-text h3 {
+  color: var(--primary-color);
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.belief-text h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  transition: width 0.3s ease;
+}
+
+.belief-item:hover .belief-text h3::after {
+  width: 100%;
+}
+
+.belief-text p {
+  color: #4a5568;
+  line-height: 1.6;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .belief-spotlight {
+    margin: 3rem auto;
+  }
+  
+  .beliefs-flow {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .faith-main {
+    padding-top: 7rem;
+  }
+
+  .faith-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .belief-spotlight {
+    margin: 2rem 1rem;
+    padding: 0 1rem;
+  }
+
+  .belief-spotlight-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .belief-spotlight-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .belief-spotlight-icon i {
+    font-size: 2.5rem;
+  }
+
+  .belief-spotlight h2 {
+    font-size: 2.2rem;
+  }
+
+  .belief-spotlight p {
+    font-size: 1.1rem;
+  }
+
+  .scripture-highlight {
+    padding: 1.5rem;
+  }
+
+  .scripture-highlight q {
+    font-size: 1.1rem;
+  }
+
+  .beliefs-flow {
+    padding: 1rem;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .belief-item {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .belief-spotlight-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .belief-spotlight-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
+  }
+
+  .belief-spotlight-icon i {
+    font-size: 2rem;
+  }
+
+  .belief-spotlight h2 {
+    font-size: 2rem;
+  }
+
+  .belief-spotlight p {
+    font-size: 1rem;
+  }
+
+  .scripture-highlight {
+    padding: 1.25rem;
+  }
+
+  .scripture-highlight q {
+    font-size: 1rem;
+  }
+
+  .belief-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .belief-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .belief-icon i {
+    font-size: 1.5rem;
+  }
+
+  .belief-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .belief-text h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,251 @@
+/* Testimonies Page Styles */
+.testimonies-main {
+  padding-top: 8rem;
+  min-height: calc(100vh - 300px);
+}
+
+.testimonies-hero {
+  background: linear-gradient(135deg, rgba(44, 74, 124, 0.1) 0%, rgba(44, 74, 124, 0.05) 100%);
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(44, 74, 124, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonies-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(44, 74, 124, 0.1) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.testimonies-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonies-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Cinzel', serif;
+  color: var(--primary-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonies-hero p {
+  font-size: 1.2rem;
+  color: #4a5568;
+}
+
+.testimonies-grid {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.testimony-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(44, 74, 124, 0.1);
+  position: relative;
+}
+
+.testimony-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.testimony-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.testimony-card:hover::before {
+  opacity: 1;
+}
+
+.testimony-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimony-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(44, 74, 124, 0.1);
+}
+
+.testimony-header i {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.testimony-header h3 {
+  font-family: 'Cinzel', serif;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.role {
+  color: var(--secondary-color);
+  font-style: italic;
+  font-size: 1.1rem;
+  display: block;
+}
+
+.testimony-quote {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimony-quote i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  opacity: 0.5;
+}
+
+.testimony-quote p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a5568;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  color: var(--secondary-color);
+  transform: translateX(5px);
+}
+
+.testimony-full {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+  margin-top: 1.5rem;
+  opacity: 0;
+}
+
+.testimony-card.expanded .testimony-full {
+  opacity: 1;
+  margin-bottom: 1.5rem;
+}
+
+.testimony-full p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  color: #4a5568;
+}
+
+.testimony-full p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .testimonies-main {
+    padding-top: 7rem;
+  }
+
+  .testimonies-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .testimonies-hero {
+    padding: 2rem 1rem;
+  }
+
+  .testimonies-grid {
+    padding: 1rem;
+  }
+
+  .testimony-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .testimony-quote p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonies-hero h1 {
+    font-size: 2rem;
+  }
+
+  .testimony-content {
+    padding: 1.5rem;
+  }
+
+  .testimony-header {
+    gap: 1rem;
+  }
+
+  .testimony-header i {
+    font-size: 2rem;
+  }
+
+  .testimony-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .testimony-quote {
+    padding-left: 1.5rem;
+  }
+
+  .testimony-quote i {
+    font-size: 1.25rem;
+  }
+
+  .role {
+    font-size: 0.9rem;
+  }
+}

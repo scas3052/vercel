@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <title>गैलरी - पवित्र सेना संगति</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="../src/images/bg/Logo Png.png" type="image/png">
+    <link rel="stylesheet" href="../src/css/style.css"/>
+    <link rel="stylesheet" href="../src/css/gallery.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="site-title">
+        <a style="text-decoration: none;" href="home-hindi.html"><h1>पवित्र सेना संगति</h1></a>
+      </div>
+        <button class="menu-toggle" aria-label="नेविगेशन टॉगल">
+          <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <nav class="main-nav">
+      <button class="nav-close" aria-label="नेविगेशन बंद करें">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="nav-container">
+        <div class="nav-links">
+          <a href="home-hindi.html" class="nav-home">
+            <i class="fas fa-home"></i>
+            होम
+          </a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              <i class="fas fa-scroll"></i>
+              हमारे बारे में 
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="chosen-hindi.html">
+                <i class="fas fa-hand-holding-heart"></i>
+                भगवान द्वारा चुने गए
+              </a>
+              <a href="origin-hindi.html">
+                <i class="fas fa-history"></i>
+                कार्य की उत्पत्ति
+              </a>
+              <a href="faith-hindi.html">
+                <i class="fas fa-cross"></i>
+                विश्वास का वक्तव्य
+              </a>
+            </div>
+          </div>
+          
+          <a href="gallery-hindi.html">
+            <i class="fas fa-images"></i>
+            गैलरी
+          </a>
+          <a href="services-hindi.html">
+            <i class="fas fa-place-of-worship"></i>
+            सेवाएं
+          </a>
+          <a href="books-hindi.html">
+            <i class="fas fa-book-bible"></i>
+            पुस्तकें
+          </a>
+          <a href="testimonies-hindi.html">
+            <i class="fas fa-dove"></i>
+            गवाहियां
+          </a>
+          <a href="prayer-request-hindi.html">
+            <i class="fas fa-praying-hands"></i>
+            प्रार्थना अनुरोध
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="gallery-main">
+      <section class="gallery-hero">
+        <div class="gallery-hero-content">
+          <h1>तस्वीरों में हमारी यात्रा</h1>
+          <p>आराधना, संगति और सेवा के क्षणों को कैद करना</p>
+        </div>
+      </section>
+
+      <section class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">सभी</button>
+        <button class="filter-btn" data-filter="worship">आराधना</button>
+        <button class="filter-btn" data-filter="events">कार्यक्रम</button>
+        <button class="filter-btn" data-filter="community">समुदाय</button>
+      </section>
+
+      <section class="gallery-grid">
+        <!-- Worship Images -->
+        <div class="gallery-item" data-category="worship">
+          <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80" alt="रविवार की आराधना सेवा">
+          <div class="gallery-overlay">
+            <h3>रविवार की आराधना सेवा</h3>
+            <p>हमारी रविवार की सेवा के दौरान स्तुति और आराधना का एक क्षण</p>
+            <button class="view-btn" onclick="openLightbox(this)">
+              <i class="fas fa-expand"></i>
+              देखें
+            </button>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="worship">
+          <img src="https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&q=80" alt="प्रार्थना सभा">
+          <div class="gallery-overlay">
+            <h3>प्रार्थना सभा</h3>
+            <p>हमारी साप्ताहिक सभा में प्रार्थना में एकजुट</p>
+            <button class="view-btn" onclick="openLightbox(this)">
+              <i class="fas fa-expand"></i>
+              देखें
+            </button>
+          </div>
+        </div>
+
+        <!-- Events Images -->
+        <div class="gallery-item" data-category="events">
+          <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80" alt="क्रिसमस समारोह">
+          <div class="gallery-overlay">
+            <h3>क्रिसमस समारोह</h3>
+            <p>हमारे उद्धारकर्ता के जन्म का जश्न मनाते हुए</p>
+            <button class="view-btn" onclick="openLightbox(this)">
+              <i class="fas fa-expand"></i>
+              देखें
+            </button>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="events">
+          <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80" alt="युवा सम्मेलन">
+          <div class="gallery-overlay">
+            <h3>युवा सम्मेलन</h3>
+            <p>अगली पीढ़ी को सशक्त बनाना</p>
+            <button class="view-btn" onclick="openLightbox(this)">
+              <i class="fas fa-expand"></i>
+              देखें
+            </button>
+          </div>
+        </div>
+
+        <!-- Community Images -->
+        <div class="gallery-item" data-category="community">
+          <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80" alt="सामुदायिक सेवा">
+          <div class="gallery-overlay">
+            <h3>सामुदायिक सेवा</h3>
+            <p>हमारे स्थानीय समुदाय की प्रेम से सेवा करते हुए</p>
+            <button class="view-btn" onclick="openLightbox(this)">
+              <i class="fas fa-expand"></i>
+              देखें
+            </button>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="community">
+          <img src="https://images.unsplash.com/photo-1523803326055-13445f07c8c9?auto=format&fit=crop&q=80" alt="संगति मिलन">
+          <div class="gallery-overlay">
+            <h3>संगति मिलन</h3>
+            <p>मसीह में रिश्ते बनाते हुए</p>
+            <button class="view-btn" onclick="openLightbox(this)">
+              <i class="fas fa-expand"></i>
+              देखें
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <button class="close-lightbox" onclick="closeLightbox()">
+        <i class="fas fa-times"></i>
+      </button>
+      <img id="lightbox-img" src="" alt="">
+      <div class="lightbox-caption">
+        <h3 id="lightbox-title"></h3>
+        <p id="lightbox-description"></p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>संपर्क करें</h3>
+          <p>ईमेल: info@holyarmyfellowship.org</p>
+          <p>फोन: +91 9999999999</p>
+        </div>
+        <div class="footer-section">
+          <h3>हमसे जुड़ें</h3>
+          <div class="social-links">
+            <a href="https://www.youtube.com/@holyarmyfellowship4726"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>हमारा स्थान</h3>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2903131521607!2d81.15606487460877!3d16.511434927449184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a361874a5c9d229%3A0xb56ba61ede1af540!2sH.A.F%20Church%20Mandavalli!5e0!3m2!1sen!2sin!4v1737304566845!5m2!1sen!2sin" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../src/js/main.js"></script>
+    <script src="../src/js/gallery.js"></script>
+  </body>
+</html>

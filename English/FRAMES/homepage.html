@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Holy Army Fellowship - Frames</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="../src/images/bg/Logo Png.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="auth.css" />
+    <link rel="stylesheet" href="frames.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <header id="main-header">
+        <div class="site-title">
+            <a href="homepage.html"><h1>Holy Army Fellowship Frames</h1></a>
+        </div>
+        <div class="header-controls">
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <button class="nav-close" aria-label="Close navigation">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="../../index.html" class="main-website-btn">
+                    <i class="fas fa-globe"></i>
+                    Main Website
+                </a>
+                <a href="homepage.html" class="nav-home">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+                <a href="profile.html">
+                    <i class="fas fa-user"></i>
+                    Profile
+                </a>
+                <a href="customize.html">
+                    <i class="fas fa-paint-brush"></i>
+                    Customization
+                </a>
+                <a href="help.html">
+                    <i class="fas fa-question-circle"></i>
+                    Help & Support
+                </a>
+                <button id="logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="welcome-section">
+        <div class="welcome-content">
+            <h1 class="welcome-title">Welcome to Holy Army Fellowship</h1>
+            <h2 class="welcome-name">
+                <span id="loggedUserFName"></span>
+                <span id="loggedUserLName"></span>
+            </h2>
+        </div>
+    </section>
+
+    <button class="filter-toggle">
+        <i class="fas fa-filter"></i>
+    </button>
+
+    <a href="cart-english.html" class="floating-cart-btn">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+    </a>
+
+    <!-- Floating Help Button -->
+    <a href="help.html" class="floating-help-btn">
+        <i class="fas fa-headset"></i>
+        <span class="unread-count" id="unreadMessageCount" style="display: none;">0</span>
+    </a>
+
+    <main>
+        <!-- Shop Frames View -->
+        <section id="framesView" class="frames-page">
+            <section class="filters-section">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search frames..." id="search-input">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Price Range</label>
+                        <select id="price-filter">
+                            <option value="">All Prices</option>
+                            <option value="0-1000">Under ₹1,000</option>
+                            <option value="1000-2000">₹1,000 - ₹2,000</option>
+                            <option value="2000-5000">₹2,000 - ₹5,000</option>
+                            <option value="5000+">Above ₹5,000</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Size</label>
+                        <select id="size-filter">
+                            <option value="">All Sizes</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Material</label>
+                        <select id="material-filter">
+                            <option value="">All Materials</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Style</label>
+                        <select id="style-filter">
+                            <option value="">All Styles</option>
+                            <option value="modern">Modern</option>
+                            <option value="classic">Classic</option>
+                            <option value="rustic">Rustic</option>
+                            <option value="minimalist">Minimalist</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <section class="products-grid">
+                <!-- Products will be dynamically loaded here -->
+            </section>
+        </section>
+
+        <!-- Image Preview Modal -->
+        <div id="imagePreviewModal" class="image-preview-modal">
+            <span class="close-preview">&times;</span>
+            <img id="previewImage" src="" alt="Preview">
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@holyarmyfellowship.org</p>
+                <p>Phone: +91 9999999999</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Address</h3>
+                <p>Holy Army Fellowship Church, Mandavalli, Andhra Pradesh, India</p>
+        </div>
+        <div class="footer-section">
+            <h3>Policies</h3>
+            <p><a href="shipping-policy.html">Shipping Policy</a></p>
+            <p><a href="terms-conditions.html">Terms & Conditions</a></p>
+            <p><a href="cancellation-refund.html">Cancellations & Refunds</a></p>
+            <p><a href="privacy-policy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script type="module" src="homepage.js"></script>
+    <script type="module" src="frames.js"></script>
+</body>
+</html>

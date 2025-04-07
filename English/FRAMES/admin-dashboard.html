@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Admin Dashboard - Holy Army Fellowship</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="admin.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <div class="site-title">
+      <h1>Holy Army Fellowship - Admin</h1>
+    </div>
+    <div class="header-controls">
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <button class="nav-close" aria-label="Close navigation">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="nav-container">
+      <div class="nav-section">
+        <h3>Management</h3>
+        <div class="nav-links">
+          <a href="#" class="nav-btn" data-section="items">
+            <i class="fas fa-box"></i>
+            Inventory
+          </a>
+          <a href="#" class="nav-btn active" data-section="orders">
+            <i class="fas fa-shopping-bag"></i>
+            Orders
+          </a>
+          <a href="admin-support.html" class="nav-btn">
+            <i class="fas fa-headset"></i>
+            Support
+          </a>
+          <a href="analytics.html" class="nav-btn">
+            <i class="fas fa-chart-line"></i>
+            Analytics
+          </a>
+        </div>
+      </div>
+      <div class="nav-section">
+        <div class="nav-links">
+          <button id="logoutBtn" class="admin-logout">
+            <i class="fas fa-sign-out-alt"></i>
+            Logout
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="admin-dashboard">
+    <div class="admin-container">
+      <!-- Items Section -->
+      <section class="items-section" id="itemsSection" style="display: none;">
+        <div class="section-header">
+          <h2>Inventory Management</h2>
+          <div class="header-actions">
+            <div class="search-items">
+              <input type="text" placeholder="Search items..." id="searchItems">
+              <button type="button">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <button class="add-item-btn" onclick="showAddItemModal()">
+              <i class="fas fa-plus"></i> Add New Item
+            </button>
+            <button class="add-frame-btn" onclick="showFrameTypeModal()">
+              <i class="fas fa-plus"></i> Add New Frame Type
+            </button>
+            <button class="add-frame-btn" onclick="showFrameSizeModal()">
+              <i class="fas fa-plus"></i> Add Frame Size Images
+            </button>
+          </div>
+        </div>
+
+        <div class="items-grid" id="itemsGrid">
+          <!-- Items will be loaded here -->
+        </div>
+
+        <!-- Add/Edit Item Modal -->
+        <div id="itemModal" class="modal">
+          <div class="modal-content">
+            <h3 id="itemModalTitle">Add New Item</h3>
+            <form id="itemForm">
+              <div class="form-group">
+                <label for="itemName">Item Name</label>
+                <input type="text" id="itemName" required>
+              </div>
+
+              <div class="form-group">
+                <label for="itemPrice">Price (₹)</label>
+                <input type="number" id="itemPrice" required>
+              </div>
+
+              <div class="form-group">
+                <label for="itemStock">Stock Quantity</label>
+                <input type="number" id="itemStock" required>
+              </div>
+
+              <div class="image-url-group">
+                <div class="form-group">
+                  <label for="itemImage">Image URL</label>
+                  <input type="text" id="itemImage" required>
+                </div>
+                <a href="https://imgbb.com/" target="_blank" class="convert-image-btn">
+                  <i class="fas fa-image"></i>
+                  Convert Image
+                </a>
+              </div>
+
+              <div class="form-group">
+                <label for="itemDescription">Description</label>
+                <textarea id="itemDescription" required></textarea>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="itemMaterial">Select Frame Type</label>
+                  <select id="itemMaterial" required>
+                    <option value="">Select Frame Type</option>
+                    <!-- Frame types will be loaded dynamically -->
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="itemSize">Select Size</label>
+                  <select id="itemSize" required>
+                    <option value="">Select Size</option>
+                    <option value="8x12">8" x 12"</option>
+                    <option value="8x18">8" x 18"</option>
+                    <option value="10x15">10" x 15"</option>
+                    <option value="12x18">12" x 18"</option>
+                    <option value="12x24">12" x 24"</option>
+                    <option value="18x36">18" x 36" (Premium)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="modal-buttons">
+                <button type="button" class="cancel-btn" onclick="closeItemModal()">Cancel</button>
+                <button type="submit" class="save-btn">Save Item</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Frame Type Modal -->
+        <div id="frameTypeModal" class="modal">
+          <div class="modal-content">
+            <h3 id="frameTypeModalTitle">Add New Frame Type</h3>
+            <form id="frameTypeForm">
+              <div class="form-group">
+                <label for="frameTypeName">Frame Type Name</label>
+                <input type="text" id="frameTypeName" required>
+              </div>
+
+              <div class="form-group">
+                <label for="frameDescription">Description</label>
+                <textarea id="frameDescription" required></textarea>
+              </div>
+
+              <div class="image-urls-container">
+                <h4>Frame Images</h4>
+                <p class="image-hint">Add multiple images to showcase different views of the frame type</p>
+                <div id="imageUrlInputs">
+                  <div class="image-url-group">
+                    <div class="form-group">
+                      <input type="text" class="frameImageUrl" placeholder="Enter image URL" required>
+                    </div>
+                    <a href="https://imgbb.com/" target="_blank" class="convert-image-btn">
+                      <i class="fas fa-image"></i>
+                      Convert Image
+                    </a>
+                  </div>
+                </div>
+                <button type="button" class="add-image-url-btn" onclick="addImageUrlInput()">
+                  <i class="fas fa-plus"></i> Add Another Image
+                </button>
+              </div>
+
+              <div class="modal-buttons">
+                <button type="button" class="cancel-btn" onclick="closeFrameTypeModal()">Cancel</button>
+                <button type="submit" class="save-btn">Save Frame Type</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Frame Size Modal -->
+        <div id="frameSizeModal" class="modal">
+          <div class="modal-content">
+            <h3>Add Frame Size Images</h3>
+            <form id="frameSizeForm">
+              <div class="form-group">
+                <label for="frameSize">Select Frame Size</label>
+                <select id="frameSize" required>
+                  <option value="">Select Size</option>
+                  <option value="8x12">8" x 12"</option>
+                  <option value="8x18">8" x 18"</option>
+                  <option value="10x15">10" x 15"</option>
+                  <option value="12x18">12" x 18"</option>
+                  <option value="12x24">12" x 24"</option>
+                  <option value="18x36">18" x 36" (Premium)</option>
+                </select>
+              </div>
+
+              <div class="image-urls-container">
+                <h4>Size Images</h4>
+                <p class="image-hint">Add multiple images to showcase frames of this size</p>
+                <div id="sizeImageUrlInputs">
+                  <div class="image-url-group">
+                    <div class="form-group">
+                      <input type="text" class="frameSizeImageUrl" placeholder="Enter image URL" required>
+                    </div>
+                    <a href="https://imgbb.com/" target="_blank" class="convert-image-btn">
+                      <i class="fas fa-image"></i>
+                      Convert Image
+                    </a>
+                  </div>
+                </div>
+                <button type="button" class="add-image-url-btn" onclick="addSizeImageUrlInput()">
+                  <i class="fas fa-plus"></i> Add Another Image
+                </button>
+              </div>
+
+              <div class="modal-buttons">
+                <button type="button" class="cancel-btn" onclick="closeFrameSizeModal()">Cancel</button>
+                <button type="submit" class="save-btn">Save Size Images</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Orders Section -->
+      <section class="orders-section" id="ordersSection">
+        <div class="orders-header">
+          <h3 class="orders-title">Order Management</h3>
+          <div class="orders-filters">
+            <div class="order-status-filters">
+              <button class="status-filter-btn active" data-status="all">All Orders</button>
+              <button class="status-filter-btn" data-status="pending">Pending</button>
+              <button class="status-filter-btn" data-status="shipped">Shipped</button>
+            </div>
+            <div class="search-orders">
+              <input type="text" placeholder="Search orders..." id="searchOrders">
+              <button type="button">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <table class="orders-table">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Date</th>
+              <th>Total</th>
+              <th>Status</th>
+              <th>Shipping Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="ordersTableBody">
+            <!-- Orders will be loaded here -->
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+
+  <!-- Order Details Modal -->
+  <div id="orderModal" class="order-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Order Details</h3>
+        <button class="close-modal" onclick="closeOrderModal()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body" id="orderModalContent">
+        <!-- Order details will be loaded here -->
+      </div>
+    </div>
+  </div>
+
+<!-- Floating Support Button -->
+<a href="admin-support.html" class="floating-support-btn">
+  <i class="fas fa-headset"></i>
+  <span class="unread-count" id="adminUnreadCount">0</span>
+</a>
+
+<script src="admin-dashboard.js" type="module"></script>
+</body>
+</html>

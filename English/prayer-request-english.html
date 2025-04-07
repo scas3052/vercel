@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Request - Holy Army Fellowship</title>
+    <link rel="icon" href="../src/images/bg/Logo Png.png" type="image/png">
+    <link rel="stylesheet" href="../src/css/style.css"/>
+    <link rel="stylesheet" href="../src/css/prayer-request.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="site-title">
+          <a href="home-english.html" class="site-logo">
+            <div class="logo-image">
+              <img src="../src/images/bg/Logo Png.png" alt="Holy Army Fellowship Logo" />
+            </div>
+            <h1>Holy Army Fellowship</h1>
+          </a>
+        </div>
+          <button class="menu-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+      </header>
+
+    <nav class="main-nav">
+        <button class="nav-close" aria-label="Close navigation">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="nav-container">
+          <div class="nav-links">
+            <a href="home-english.html" class="nav-home">
+              <i class="fas fa-home"></i>
+              Home
+            </a>
+            <div class="dropdown">
+              <a href="#" class="dropdown-toggle">
+                <i class="fas fa-scroll"></i>
+                About Us 
+                <i class="fas fa-chevron-down"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="chosen-english.html">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    Chosen by God
+                  </a>
+                <a href="origin-english.html">
+                  <i class="fas fa-history"></i>
+                  Origin of Work
+                </a>
+                <a href="faith-english.html">
+                  <i class="fas fa-cross"></i>
+                  Statement of Faith
+                </a>
+              </div>
+            </div>
+            <!-- <a href="locations-english.html">
+              <i class="fas fa-map-marker-alt"></i>
+              Locations
+            </a> -->
+            <a href="gallery-english.html">
+              <i class="fas fa-images"></i>
+              Gallery
+            </a>
+            <a href="videos-english.html">
+                <i class="fas fa-video"></i>
+                Videos
+              </a>
+            <!-- <a href="services-english.html">
+              <i class="fas fa-place-of-worship"></i>
+              Services
+            </a> -->
+            <a href="books-english.html">
+              <i class="fas fa-book-bible"></i>
+              Books
+            </a>
+            <a href="testimonies-english.html">
+              <i class="fas fa-dove"></i>
+              Testimonies
+            </a>
+            <a href="prayer-request-english.html">
+              <i class="fas fa-praying-hands"></i>
+              Prayer Request
+            </a>
+            <a href="FRAMES/index.html">
+                <i class="fas fa-image"></i>
+                Frames
+              </a>
+          </div>
+        </div>
+      </nav>
+  
+    <div class="toast-container" id="toastContainer"></div>
+
+    <div class="container">
+        <aside class="verses-sidebar">
+            <div class="verse">
+                <div class="verse-number">Matthew 10:1</div>
+                <p class="verse-text">Jesus called his twelve disciples to him and gave them authority to drive out impure spirits and to heal every disease and sickness.</p>
+            </div>
+            
+            <div class="verse">
+                <div class="verse-number">Matthew 10:2</div>
+                <p class="verse-text">These are the names of the twelve apostles: first, Simon (who is called Peter) and his brother Andrew; James son of Zebedee, and his brother John;</p>
+            </div>
+
+            <div class="verse">
+                <div class="verse-number">Matthew 10:3</div>
+                <p class="verse-text">Philip and Bartholomew; Thomas and Matthew the tax collector; James son of Alphaeus, and Thaddaeus;</p>
+            </div>
+
+            <div class="verse">
+                <div class="verse-number">Matthew 10:4</div>
+                <p class="verse-text">Simon the Zealot and Judas Iscariot, who betrayed him.</p>
+            </div>
+
+            <div class="verse">
+                <div class="verse-number">Matthew 10:5</div>
+                <p class="verse-text">These twelve Jesus sent out with the following instructions: "Do not go among the Gentiles or enter any town of the Samaritans.</p>
+            </div>
+
+            <div class="verse">
+                <div class="verse-number">Matthew 10:6</div>
+                <p class="verse-text">Go rather to the lost sheep of Israel.</p>
+            </div>
+
+            <div class="verse">
+                <div class="verse-number">Matthew 10:7</div>
+                <p class="verse-text">As you go, proclaim this message: 'The kingdom of heaven has come near.'</p>
+            </div>
+
+            <div class="verse">
+                <div class="verse-number">Matthew 10:8</div>
+                <p class="verse-text">Heal the sick, raise the dead, cleanse those who have leprosy, drive out demons. Freely you have received; freely give.</p>
+            </div>
+
+            <div class="verse">
+                <div class="verse-number">Matthew 10:9</div>
+                <p class="verse-text">Do not get any gold or silver or copper to take with you in your belts.</p>
+            </div>
+        </aside>
+
+        <main class="form-container">
+            <h1>Prayer Request</h1>
+            <p class="subtitle">"Ask and it will be given to you; seek and you will find; knock and the door will be opened to you."</p>
+            
+            <div class="request-method-buttons">
+                <button class="method-btn active" onclick="switchMethod('whatsapp')">
+                    <i class="fab fa-whatsapp"></i>
+                    Send via WhatsApp
+                </button>
+                <button class="method-btn" onclick="switchMethod('email')">
+                    <i class="fas fa-envelope"></i>
+                    Send via Email
+                </button>
+            </div>
+
+            <form id="prayerForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="place">Location</label>
+                    <input type="text" id="place" name="location" placeholder="Enter your city/country">
+                </div>
+
+                <div class="form-group">
+                    <label for="prayer-type">Type of Prayer Request</label>
+                    <select id="prayer-type" name="prayer_type" required>
+                        <option value="">Select a category</option>
+                        <option value="healing">Healing</option>
+                        <option value="guidance">Guidance & Direction</option>
+                        <option value="thanksgiving">Thanksgiving</option>
+                        <option value="family">Family & Relationships</option>
+                        <option value="financial">Financial Breakthrough</option>
+                        <option value="spiritual">Spiritual Growth</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="prayer-request">Your Prayer Request</label>
+                    <textarea id="prayer-request" name="message" rows="6" required placeholder="Share your prayer request here..."></textarea>
+                </div>
+
+                <button type="submit" id="submitButton">
+                    Send via WhatsApp
+                    <i class="fab fa-whatsapp"></i>
+                </button>
+            </form>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@holyarmyfellowship.org</p>
+                <p>Phone: +91 9999999999</p>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/@holyarmyfellowship4726"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Our Location</h3>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2903131521607!2d81.15606487460877!3d16.511434927449184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a361874a5c9d229%3A0xb56ba61ede1af540!2sH.A.F%20Church%20Mandavalli!5e0!3m2!1sen!2sin!4v1737304566845!5m2!1sen!2sin" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../src/js/main.js"></script>
+    <script>
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            
+            const icon = type === 'success' ? 'check-circle' : 'x-circle';
+            toast.innerHTML = `
+                <i class="fas fa-${icon}"></i>
+                <span>${message}</span>
+            `;
+            
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.add('hide');
+                setTimeout(() => {
+                    container.removeChild(toast);
+                }, 300);
+            }, 3000);
+        }
+
+        function switchMethod(method) {
+            const form = document.getElementById('prayerForm');
+            const buttons = document.querySelectorAll('.method-btn');
+            const submitButton = document.getElementById('submitButton');
+            const emailField = document.getElementById('email-field');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            const activeButton = document.querySelector(`.method-btn[onclick*="${method}"]`);
+            activeButton.classList.add('active');
+
+            if (method === 'whatsapp') {
+                form.onsubmit = function(e) {
+                    e.preventDefault();
+                    const name = document.getElementById('name').value;
+                    const place = document.getElementById('place').value;
+                    const prayerType = document.getElementById('prayer-type').value;
+                    const request = document.getElementById('prayer-request').value;
+
+                    const message = `*Prayer Request*%0A%0A*Name:* ${name}%0A*Location:* ${place}%0A*Prayer Type:* ${prayerType}%0A*Request:* ${request}`;
+                    const whatsappUrl = `https://wa.me/917386446547?text=${message}`;
+                    window.open(whatsappUrl, '_blank');
+                    showToast('Opening WhatsApp to send your prayer request...', 'success');
+                    form.reset();
+                };
+                submitButton.innerHTML = 'Send via WhatsApp <i class="fab fa-whatsapp"></i>';
+                
+                // Remove email field if it exists
+                if (document.getElementById('email-field')) {
+                    document.getElementById('email-field').remove();
+                }
+            } else {
+                // Add email field if it doesn't exist
+                if (!document.getElementById('email-field')) {
+                    const emailField = document.createElement('div');
+                    emailField.id = 'email-field';
+                    emailField.className = 'form-group';
+                    emailField.innerHTML = `
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    `;
+                    document.querySelector('.form-group').after(emailField);
+                }
+
+                form.action = "https://api.web3forms.com/submit";
+                const accessKeyInput = document.createElement('input');
+                accessKeyInput.type = 'hidden';
+                accessKeyInput.name = 'access_key';
+                accessKeyInput.value = '7cc27127-f278-472d-b9d4-99a3376b128c';
+                form.appendChild(accessKeyInput);
+
+                form.onsubmit = async function(e) {
+                    e.preventDefault();
+                    submitButton.disabled = true;
+                    
+                    try {
+                        const formData = new FormData(form);
+                        const response = await fetch('https://api.web3forms.com/submit', {
+                            method: 'POST',
+                            body: formData
+                        });
+                        
+                        const data = await response.json();
+                        
+                        if (data.success) {
+                            showToast('Prayer request submitted successfully! We will pray for you.', 'success');
+                            form.reset();
+                        } else {
+                            throw new Error('Submission failed');
+                        }
+                    } catch (error) {
+                        showToast('There was an error submitting your prayer request. Please try again.', 'error');
+                    } finally {
+                        submitButton.disabled = false;
+                    }
+                };
+                submitButton.innerHTML = 'Submit Prayer Request <i class="fas fa-paper-plane"></i>';
+            }
+        }
+
+        // Initialize WhatsApp method as default
+        window.onload = function() {
+            switchMethod('whatsapp');
+        }
+    </script>
+</body>
+</html>

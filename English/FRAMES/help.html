@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Help & Support - Holy Army Fellowship</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="help.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header id="main-header">
+    <div class="site-title">
+      <a href="homepage.html"><h1>Holy Army Fellowship Frames</h1></a>
+    </div>
+    <div class="header-controls">
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <button class="nav-close" aria-label="Close navigation">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="nav-container">
+      <div class="nav-links">
+        <a href="homepage.html" class="nav-home">
+          <i class="fas fa-home"></i>
+          Home
+        </a>
+        <a href="profile.html">
+          <i class="fas fa-user"></i>
+          Profile
+        </a>
+        <a href="help.html" class="active">
+          <i class="fas fa-question-circle"></i>
+          Help
+        </a>
+        <button id="logout">
+          <i class="fas fa-sign-out-alt"></i>
+          Logout
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="help-page">
+    <div class="help-container">
+      <div class="chat-section">
+        <div class="chat-header">
+          <div class="chat-header-info">
+            <h2>Chat with Support</h2>
+            <p>We're here to help!</p>
+          </div>
+          <div class="admin-status">
+            <span id="adminStatusIndicator" class="status-indicator offline"></span>
+            <span id="adminStatusText">Offline</span>
+          </div>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+          <!-- Messages will be loaded here -->
+          <div class="chat-loading">
+            <div class="loading-spinner"></div>
+            <p>Loading conversation...</p>
+          </div>
+        </div>
+
+        <div id="typingIndicator" class="typing-indicator" style="display: none;">
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+          <p>Admin is typing...</p>
+        </div>
+
+        <form id="chatForm" class="chat-form">
+          <div class="attachment-preview" id="attachmentPreview"></div>
+          <div class="message-input-container">
+            <label for="fileAttachment" class="attachment-btn">
+              <i class="fas fa-paperclip"></i>
+            </label>
+            <input type="file" id="fileAttachment" accept="image/*,.pdf,.doc,.docx" hidden>
+            <div class="message-input">
+              <input type="text" id="messageInput" placeholder="Type your message..." required>
+              <button type="submit" id="sendButton">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: info@holyarmyfellowship.org</p>
+        <p>Phone: +91 9999999999</p>
+      </div>
+      <div class="footer-section">
+        <h3>Connect With Us</h3>
+        <div class="social-links">
+          <a href="https://www.youtube.com/@holyarmyfellowship4726">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Our Location</h3>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2903131521607!2d81.15606487460877!3d16.511434927449184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a361874a5c9d229%3A0xb56ba61ede1af540!2sH.A.F%20Church%20Mandavalli!5e0!3m2!1sen!2sin!4v1737304566845!5m2!1sen!2sin"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Image Preview Modal -->
+  <div id="imagePreviewModal" class="image-preview-modal">
+    <span class="close-preview">&times;</span>
+    <img id="previewImage" src="" alt="Preview">
+    <a id="downloadLink" href="#" download class="download-btn">
+      <i class="fas fa-download"></i> Download
+    </a>
+  </div>
+
+  <script src="auth.js"></script>
+  <script type="module" src="help.js"></script>
+</body>
+</html>

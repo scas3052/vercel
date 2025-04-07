@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <title>स्थान - पवित्र सेना संगति</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="../src/images/bg/Logo Png.png" type="image/png">
+    <link rel="stylesheet" href="../src/css/style.css"/>
+    <link rel="stylesheet" href="../src/css/services.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="site-title">
+        <a style="text-decoration: none;" href="home-hindi.html"><h1>पवित्र सेना संगति</h1></a>
+      </div>
+        <button class="menu-toggle" aria-label="नेविगेशन टॉगल">
+          <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <nav class="main-nav">
+      <button class="nav-close" aria-label="नेविगेशन बंद करें">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="nav-container">
+        <div class="nav-links">
+          <a href="home-hindi.html" class="nav-home">
+            <i class="fas fa-home"></i>
+            होम
+          </a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              <i class="fas fa-scroll"></i>
+              हमारे बारे में 
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="chosen-hindi.html">
+                <i class="fas fa-hand-holding-heart"></i>
+                भगवान द्वारा चुने गए
+              </a>
+              <a href="origin-hindi.html">
+                <i class="fas fa-history"></i>
+                कार्य की उत्पत्ति
+              </a>
+              <a href="faith-hindi.html">
+                <i class="fas fa-cross"></i>
+                विश्वास का वक्तव्य
+              </a>
+            </div>
+          </div>
+          
+          <a href="gallery-hindi.html">
+            <i class="fas fa-images"></i>
+            गैलरी
+          </a>
+          <a href="services-hindi.html">
+            <i class="fas fa-place-of-worship"></i>
+            सेवाएं
+          </a>
+          <a href="books-hindi.html">
+            <i class="fas fa-book-bible"></i>
+            पुस्तकें
+          </a>
+          <a href="testimonies-hindi.html">
+            <i class="fas fa-dove"></i>
+            गवाहियां
+          </a>
+          <a href="prayer-request-hindi.html">
+            <i class="fas fa-praying-hands"></i>
+            प्रार्थना अनुरोध
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="locations-main">
+      <section class="locations-hero">
+        <div class="locations-hero-content">
+          <h1>हमारे स्थान</h1>
+          <p>आंध्र प्रदेश और तेलंगाना में हमारे कई स्थानों में से किसी एक में शामिल हों</p>
+          <div class="locations-stats">
+            <div class="stat-item">
+              <i class="fas fa-church"></i>
+              <span class="stat-number">200+</span>
+              <span class="stat-label">चर्च</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-map-marked-alt"></i>
+              <span class="stat-number">10</span>
+              <span class="stat-label">जिले</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-users"></i>
+              <span class="stat-number">10000+</span>
+              <span class="stat-label">सदस्य</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="search-container">
+        <input 
+          type="text" 
+          class="search-input" 
+          placeholder="चर्च का नाम, पता, पास्टर का नाम, या फोन नंबर से खोजें..."
+          id="churchSearch"
+        >
+      </div>
+
+      <section class="locations-filters">
+        <button class="region-btn active" data-region="all">सभी क्षेत्र</button>
+        <button class="region-btn" data-region="andhra">आंध्र प्रदेश</button>
+        <button class="region-btn" data-region="telangana">तेलंगाना</button>
+      </section>
+
+      <div class="no-results">
+        आपकी खोज मानदंडों से मेल खाने वाला कोई चर्च नहीं मिला
+      </div>
+
+      <section class="district-section" data-region="andhra">
+        <h2 class="state-title">
+          <i class="fas fa-map-marked-alt"></i>
+          आंध्र प्रदेश
+        </h2>
+        
+        <div class="district-container">
+          <div class="district-header">
+            <h3>
+              <i class="fas fa-chevron-down"></i>
+              कृष्णा जिला
+            </h3>
+            <span class="church-count">2 चर्च</span>
+          </div>
+          <div class="locations-grid">
+            <div class="location-card">
+              <span class="region-label">कृष्णा</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  एचएएफ चर्च विजयवाड़ा
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>पास्टर जॉन डो</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>123 चर्च स्ट्रीट, विजयवाड़ा</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999991</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> सेवा समय</h4>
+                  <ul>
+                    <li><span>रविवार आराधना</span><span>सुबह 10:00</span></li>
+                    <li><span>बुधवार प्रार्थना</span><span>शाम 6:30</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <a href="https://maps.google.com" target="_blank" class="action-btn directions-btn">
+                    <i class="fas fa-directions"></i>
+                    दिशा-निर्देश प्राप्त करें
+                  </a>
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    संपर्क करें
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="location-card">
+              <span class="region-label">कृष्णा</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  एचएएफ चर्च मछलीपट्टनम
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>पास्टर जेन स्मिथ</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>456 मंदिर स्ट्रीट, मछलीपट्टनम</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999992</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> सेवा समय</h4>
+                  <ul>
+                    <li><span>रविवार आराधना</span><span>सुबह 9:30</span></li>
+                    <li><span>शुक्रवार प्रार्थना</span><span>शाम 7:00</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <a href="https://maps.google.com" target="_blank" class="action-btn directions-btn">
+                    <i class="fas fa-directions"></i>
+                    दिशा-निर्देश प्राप्त करें
+                  </a>
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    संपर्क करें
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="district-container">
+          <div class="district-header">
+            <h3>
+              <i class="fas fa-chevron-down"></i>
+              गुंटूर जिला
+            </h3>
+            <span class="church-count">2 चर्च</span>
+          </div>
+          <div class="locations-grid">
+            <div class="location-card">
+              <span class="region-label">गुंटूर</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  एचएएफ चर्च गुंटूर सिटी
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>पास्टर माइकल जॉनसन</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>789 चर्च रोड, गुंटूर</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999993</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> सेवा समय</h4>
+                  <ul>
+                    <li><span>रविवार आराधना</span><span>सुबह 10:00</span></li>
+                    <li><span>गुरुवार प्रार्थना</span><span>शाम 6:00</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <a href="https://maps.google.com" target="_blank" class="action-btn directions-btn">
+                    <i class="fas fa-directions"></i>
+                    दिशा-निर्देश प्राप्त करें
+                  </a>
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    संपर्क करें
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="location-card">
+              <span class="region-label">गुंटूर</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  एचएएफ चर्च तेनाली
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>पास्टर सारा विलियम्स</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>101 मंदिर स्ट्रीट, तेनाली</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999994</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> सेवा समय</h4>
+                  <ul>
+                    <li><span>रविवार आराधना</span><span>सुबह 9:30</span></li>
+                    <li><span>बुधवार प्रार्थना</span><span>शाम 7:00</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <a href="https://maps.google.com" target="_blank" class="action-btn directions-btn">
+                    <i class="fas fa-directions"></i>
+                    दिशा-निर्देश प्राप्त करें
+                  </a>
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    संपर्क करें
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="district-section" data-region="telangana">
+        <h2 class="state-title">
+          <i class="fas fa-map-marked-alt"></i>
+          तेलंगाना
+        </h2>
+        
+        <div class="district-container">
+          <div class="district-header">
+            <h3>
+              <i class="fas fa-chevron-down"></i>
+              हैदराबाद जिला
+            </h3>
+            <span class="church-count">2 चर्च</span>
+          </div>
+          <div class="locations-grid">
+            <div class="location-card">
+              <span class="region-label">हैदराबाद</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  एचएएफ चर्च सिकंदराबाद
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>पास्टर डेविड ब्राउन</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>123 चैपल रोड, सिकंदराबाद</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999995</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> सेवा समय</h4>
+                  <ul>
+                    <li><span>रविवार आराधना</span><span>सुबह 10:00</span></li>
+                    <li><span>मंगलवार प्रार्थना</span><span>शाम 6:30</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <a href="https://maps.google.com" target="_blank" class="action-btn directions-btn">
+                    <i class="fas fa-directions"></i>
+                    दिशा-निर्देश प्राप्त करें
+                  </a>
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    संपर्क करें
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="location-card">
+              <span class="region-label">हैदराबाद</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  एचएएफ चर्च कुकटपल्ली
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>पास्टर रॉबर्ट विल्सन</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>456 मंदिर स्ट्रीट, कुकटपल्ली</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999996</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> सेवा समय</h4>
+                  <ul>
+                    <li><span>रविवार आराधना</span><span>सुबह 9:30</span></li>
+                    <li><span>शुक्रवार प्रार्थना</span><span>शाम 7:00</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <a href="https://maps.google.com" target="_blank" class="action-btn directions-btn">
+                    <i class="fas fa-directions"></i>
+                    दिशा-निर्देश प्राप्त करें
+                  </a>
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    संपर्क करें
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>संपर्क करें</h3>
+          <p>ईमेल: info@holyarmyfellowship.org</p>
+          <p>फोन: +91 9999999999</p>
+        </div>
+        <div class="footer-section">
+          <h3>हमसे जुड़ें</h3>
+          <div class="social-links">
+            <a href="https://www.youtube.com/@holyarmyfellowship4726"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>हमारा स्थान</h3>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2903131521607!2d81.15606487460877!3d16.511434927449184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a361874a5c9d229%3A0xb56ba61ede1af540!2sH.A.F%20Church%20Mandavalli!5e0!3m2!1sen!2sin!4v1737304566845!5m2!1sen!2sin" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../src/js/main.js"></script>
+    <script src="../src/js/services.js"></script>
+  </body>
+</html>

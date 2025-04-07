@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Profile - Holy Army Fellowship Frames</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="profile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header id="main-header">
+    <div class="site-title">
+      <a href="homepage.html"><h1>Holy Army Fellowship Frames</h1></a>
+    </div>
+    <div class="header-controls">
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <button class="nav-close" aria-label="Close navigation">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="nav-container">
+      <div class="nav-links">
+        <a href="homepage.html" class="nav-home">
+          <i class="fas fa-home"></i>
+          Home
+        </a>
+        <a href="profile.html">
+          <i class="fas fa-user"></i>
+          Profile
+        </a>
+        <button id="logout">
+          <i class="fas fa-sign-out-alt"></i>
+          Logout
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="profile-page">
+    <div class="profile-container">
+      <div id="profile-content" class="profile-content">
+        <div class="profile-header">
+          <div class="profile-avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <h2>My Profile</h2>
+        </div>
+
+        <div class="profile-sections">
+          <div class="profile-section">
+            <h3><i class="fas fa-user-circle"></i> Personal Information</h3>
+            <div class="info-grid">
+              <div class="info-item">
+                <label>Full Name</label>
+                <p id="profileFullName">Loading...</p>
+              </div>
+              <div class="info-item">
+                <label>Email</label>
+                <p id="profileEmail">Loading...</p>
+              </div>
+              <div class="info-item">
+                <label>Phone Number</label>
+                <div class="phone-number-container">
+                  <p id="profilePhone">Not added</p>
+                  <button id="editPhoneBtn" class="edit-phone-btn">
+                    <i class="fas fa-edit"></i> Edit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-section">
+            <h3>
+              <i class="fas fa-map-marker-alt"></i> 
+              Address Information
+              <button class="add-address-btn" id="addAddressBtn">
+                <i class="fas fa-plus"></i> Add New Address
+              </button>
+            </h3>
+            
+            <div id="noAddressMessage" class="no-address-message">
+              <i class="fas fa-home"></i>
+              <p>No addresses added yet</p>
+              <button class="add-first-address-btn" onclick="document.getElementById('addAddressBtn').click()">
+                Add Your First Address
+              </button>
+            </div>
+
+            <div id="addressList" class="address-list"></div>
+
+            <!-- Add/Edit Address Modal -->
+            <div id="addressModal" class="modal">
+              <div class="modal-content">
+                <h3 id="modalTitle">Add New Address</h3>
+                <form id="addressForm">
+                  <div class="form-group">
+                    <input type="text" id="addressLine1" placeholder=" " required>
+                    <label for="addressLine1">Address Line 1</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" id="addressLine2" placeholder=" ">
+                    <label for="addressLine2">Address Line 2 (Optional)</label>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <input type="text" id="city" placeholder=" " required>
+                      <label for="city">City</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" id="state" placeholder=" " required>
+                      <label for="state">State</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" id="pincode" placeholder=" " required>
+                    <label for="pincode">PIN Code</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="tel" id="phone" placeholder=" " required>
+                    <label for="phone">Phone Number</label>
+                  </div>
+                  <div class="form-checkbox">
+                    <input type="checkbox" id="isDefault">
+                    <label for="isDefault">Set as default address</label>
+                  </div>
+                  <div class="modal-buttons">
+                    <button type="button" class="cancel-btn" onclick="closeAddressModal()">Cancel</button>
+                    <button type="submit" class="save-btn">Save Address</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Phone Number Modal -->
+            <div id="phoneModal" class="modal">
+              <div class="modal-content">
+                <h3>Update Phone Number</h3>
+                <form id="phoneForm">
+                  <div class="form-group">
+                    <input type="tel" id="personalPhone" placeholder=" " required pattern="[0-9]{10}">
+                    <label for="personalPhone">Phone Number</label>
+                  </div>
+                  <div class="modal-buttons">
+                    <button type="button" class="cancel-btn" onclick="closePhoneModal()">Cancel</button>
+                    <button type="submit" class="save-btn">Save Number</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-section" id="orderHistorySection" style="display: none;">
+            <h3><i class="fas fa-shopping-bag"></i> Order History</h3>
+            <div id="noOrdersMessage" class="no-orders-message">
+              <i class="fas fa-shopping-bag"></i>
+              <p>No orders yet</p>
+              <a href="homepage.html" class="shop-now-btn">Start Shopping</a>
+            </div>
+            <div id="ordersList" class="orders-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: info@holyarmyfellowship.org</p>
+        <p>Phone: +91 9999999999</p>
+      </div>
+      <div class="footer-section">
+        <h3>Connect With Us</h3>
+        <div class="social-links">
+          <a href="https://www.youtube.com/@holyarmyfellowship4726">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Our Location</h3>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2903131521607!2d81.15606487460877!3d16.511434927449184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a361874a5c9d229%3A0xb56ba61ede1af540!2sH.A.F%20Church%20Mandavalli!5e0!3m2!1sen!2sin!4v1737304566845!5m2!1sen!2sin"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="auth.js"></script>
+  <script type="module" src="profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ta">
+  <head>
+    <title>எங்கள் சேவைகள் - புனித ராணுவ ஐக்கியம்</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="../src/images/bg/Logo Png.png" type="image/png">
+    <link rel="stylesheet" href="../src/css/style.css"/>
+    <link rel="stylesheet" href="../src/css/services.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="site-title">
+        <a style="text-decoration: none;" href="home-tamil.html"><h1>புனித ராணுவ ஐக்கியம்</h1></a>
+      </div>
+      <button class="menu-toggle" aria-label="வழிசெலுத்தல் டாகிள்">
+        <i class="fas fa-bars"></i>
+      </button>
+    </header>
+
+    <nav class="main-nav">
+        <button class="nav-close" aria-label="Close navigation">
+            <i class="fas fa-times"></i>
+          </button>
+      <div class="nav-container">
+        <div class="nav-links">
+          <a href="home-tamil.html" class="nav-home">
+            <i class="fas fa-home"></i>
+            முகப்பு
+          </a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              <i class="fas fa-scroll"></i>
+              எங்களைப் பற்றி 
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="chosen-tamil.html">
+                <i class="fas fa-hand-holding-heart"></i>
+                தேவனால் தேர்ந்தெடுக்கப்பட்டவர்
+              </a>
+              <a href="origin-tamil.html">
+                <i class="fas fa-history"></i>
+                வேலையின் தோற்றம்
+              </a>
+              <a href="faith-tamil.html">
+                <i class="fas fa-cross"></i>
+                விசுவாச அறிக்கை
+              </a>
+            </div>
+          </div>
+          
+          <a href="gallery-tamil.html">
+            <i class="fas fa-images"></i>
+            காட்சியகம்
+          </a>
+          <a href="services-tamil.html">
+            <i class="fas fa-place-of-worship"></i>
+            சேவைகள்
+          </a>
+          <a href="books-tamil.html">
+            <i class="fas fa-book-bible"></i>
+            புத்தகங்கள்
+          </a>
+          <a href="testimonies-tamil.html">
+            <i class="fas fa-dove"></i>
+            சாட்சிகள்
+          </a>
+          <a href="prayer-request-tamil.html">
+            <i class="fas fa-praying-hands"></i>
+            ஜெப வேண்டுகோள்
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="services-main">
+      <section class="services-hero">
+        <div class="services-hero-content">
+          <h1>எங்கள் சேவைகள்</h1>
+          <p>ஆந்திரப் பிரதேசம் முழுவதும் ஆராதனையில் இணையுங்கள்</p>
+        </div>
+      </section>
+
+      <section class="services-content">
+        <div class="state-container">
+          <div class="state-header">
+            <h2>ஆந்திரப் பிரதேசம்</h2>
+            <p>சேவை இடங்களைக் காண மாவட்டத்தைத் தேர்ந்தெடுக்கவும்</p>
+          </div>
+
+          <!-- Search Section -->
+          <div class="search-section">
+            <div class="search-container">
+              <i class="fas fa-search search-icon"></i>
+              <input 
+                type="text" 
+                id="serviceSearch" 
+                placeholder="தேவாலயம் பெயர், பாஸ்டர், அல்லது தொலைபேசி எண் மூலம் தேடுங்கள்..."
+                onkeyup="searchServices()"
+              >
+              <button class="search-clear" onclick="clearSearch()">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="search-results" id="searchResults"></div>
+          </div>
+          
+          <div class="districts-grid" id="districtsGrid">
+            <!-- Anantapur District -->
+            <div class="district-card" data-district="அனந்தபூர்">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>அனந்தபூர் மாவட்டம்</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>தேவாலயம் & தொடர்பு</th>
+                        <th>சேவை நேரங்கள்</th>
+                        <th>இடம்</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="எச்.ஏ.எஃப் தேவாலயம் அனந்தபூர் பாஸ்டர் சாமுவேல் 9876543213">
+                        <td>
+                          <strong>எச்.ஏ.எஃப் தேவாலயம் அனந்தபூர்</strong><br>
+                          பாஸ்டர் சாமுவேல்<br>
+                          +91 9876543213
+                        </td>
+                        <td>
+                          ஞாயிறு: காலை 9:00<br>
+                          புதன்: மாலை 7:00<br>
+                          வெள்ளி: மாலை 6:30
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            வரைபடம் காண்க
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- East Godavari District -->
+            <div class="district-card" data-district="கிழக்கு கோதாவரி">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>கிழக்கு கோதாவரி மாவட்டம்</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>தேவாலயம் & தொடர்பு</th>
+                        <th>சேவை நேரங்கள்</th>
+                        <th>இடம்</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="எச்.ஏ.எஃப் தேவாலயம் <boltAction type="file" filePath="services-tamil.html"> ராஜமுந்திரி பாஸ்டர் ஜோசப் 9876543214">
+                        <td>
+                          <strong>எச்.ஏ.எஃப் தேவாலயம் ராஜமுந்திரி</strong><br>
+                          பாஸ்டர் ஜோசப்<br>
+                          +91 9876543214
+                        </td>
+                        <td>
+                          ஞாயிறு: காலை 10:30<br>
+                          செவ்வாய்: மாலை 6:30<br>
+                          வியாழன்: மாலை 7:00
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            வரைபடம் காண்க
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Guntur District -->
+            <div class="district-card" data-district="குண்டூர்">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>குண்டூர் மாவட்டம்</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>தேவாலயம் & தொடர்பு</th>
+                        <th>சேவை நேரங்கள்</th>
+                        <th>இடம்</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="எச்.ஏ.எஃப் தேவாலயம் குண்டூர் பாஸ்டர் டேவிட் 9876543211">
+                        <td>
+                          <strong>எச்.ஏ.எஃப் தேவாலயம் குண்டூர்</strong><br>
+                          பாஸ்டர் டேவிட்<br>
+                          +91 9876543211
+                        </td>
+                        <td>
+                          ஞாயிறு: காலை 9:30<br>
+                          செவ்வாய்: மாலை 6:00<br>
+                          வியாழன்: மாலை 7:00
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            வரைபடம் காண்க
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Krishna District -->
+            <div class="district-card" data-district="கிருஷ்ணா">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>கிருஷ்ணா மாவட்டம்</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>தேவாலயம் & தொடர்பு</th>
+                        <th>சேவை நேரங்கள்</th>
+                        <th>இடம்</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="எச்.ஏ.எஃப் தேவாலயம் மண்டவல்லி பாஸ்டர் ஜான் 9876543210">
+                        <td>
+                          <strong>எச்.ஏ.எஃப் தேவாலயம் மண்டவல்லி</strong><br>
+                          பாஸ்டர் ஜான்<br>
+                          +91 9876543210
+                        </td>
+                        <td>
+                          ஞாயிறு: காலை 10:00<br>
+                          புதன்: மாலை 6:30<br>
+                          வெள்ளி: மாலை 7:00
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            வரைபடம் காண்க
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Prakasam District -->
+            <div class="district-card" data-district="பிரகாசம்">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>பிரகாசம் மாவட்டம்</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>தேவாலயம் & தொடர்பு</th>
+                        <th>சேவை நேரங்கள்</th>
+                        <th>இடம்</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="எச்.ஏ.எஃப் தேவாலயம் ஒங்கோலு பாஸ்டர் தாமஸ் 9876543215">
+                        <td>
+                          <strong>எச்.ஏ.எஃப் தேவாலயம் ஒங்கோலு</strong><br>
+                          பாஸ்டர் தாமஸ்<br>
+                          +91 9876543215
+                        </td>
+                        <td>
+                          ஞாயிறு: காலை 10:00<br>
+                          திங்கள்: மாலை 7:00<br>
+                          சனி: மாலை 6:30
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            வரைபடம் காண்க
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Visakhapatnam District -->
+            <div class="district-card" data-district="விசாகப்பட்டினம்">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>விசாகப்பட்டினம் மாவட்டம்</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>தேவாலயம் & தொடர்பு</th>
+                        <th>சேவை நேரங்கள்</th>
+                        <th>இடம்</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="எச்.ஏ.எஃப் தேவாலயம் விசாகப்பட்டினம் பாஸ்டர் பீட்டர் 9876543216">
+                        <td>
+                          <strong>எச்.ஏ.எஃப் தேவாலயம் விசாகப்பட்டினம்</strong><br>
+                          பாஸ்டர் பீட்டர்<br>
+                          +91 9876543216
+                        </td>
+                        <td>
+                          ஞாயிறு: காலை 9:00<br>
+                          புதன்: மாலை 7:00<br>
+                          வெள்ளி: மாலை 6:00
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            வரைபடம் காண்க
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>தொடர்பு கொள்ள</h3>
+          <p>மின்னஞ்சல்: info@holyarmyfellowship.org</p>
+          <p>தொலைபேசி: +91 9999999999</p>
+        </div>
+        <div class="footer-section">
+          <h3>எங்களுடன் இணையுங்கள்</h3>
+          <div class="social-links">
+            <a href="https://www.youtube.com/@holyarmyfellowship4726"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>எங்கள் இடம்</h3>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2903131521607!2d81.15606487460877!3d16.511434927449184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a361874a5c9d229%3A0xb56ba61ede1af540!2sH.A.F%20Church%20Mandavalli!5e0!3m2!1sen!2sin!4v1737304566845!5m2!1sen!2sin" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../src/js/main.js"></script>
+    <script>
+      function toggleDistrict(header) {
+        const card = header.parentElement;
+        const content = card.querySelector('.district-content');
+        const icon = header.querySelector('.fa-chevron-down');
+        
+        // Close all other districts
+        document.querySelectorAll('.district-card').forEach(otherCard => {
+          if (otherCard !== card && otherCard.classList.contains('active')) {
+            otherCard.classList.remove('active');
+            otherCard.querySelector('.fa-chevron-down').style.transform = 'rotate(0deg)';
+          }
+        });
+
+        // Toggle current district
+        card.classList.toggle('active');
+        icon.style.transform = card.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+      }
+
+      function searchServices() {
+        const searchInput = document.getElementById('serviceSearch');
+        const searchTerm = searchInput.value.toLowerCase();
+        const districtsGrid = document.getElementById('districtsGrid');
+        const searchResults = document.getElementById('searchResults');
+        
+        if (searchTerm.length === 0) {
+          districtsGrid.style.display = 'grid';
+          searchResults.style.display = 'none';
+          return;
+        }
+
+        const allRows = document.querySelectorAll('tr[data-search]');
+        const matchingRows = [];
+
+        allRows.forEach(row => {
+          const searchData = row.getAttribute('data-search').toLowerCase();
+          if (searchData.includes(searchTerm)) {
+            const district = row.closest('.district-card').getAttribute('data-district');
+            const rowClone = row.cloneNode(true);
+            matchingRows.push({ district, element: rowClone });
+          }
+        });
+
+        if (matchingRows.length > 0) {
+          districtsGrid.style.display = 'none';
+          searchResults.style.display = 'block';
+          searchResults.innerHTML = `
+            <div class="search-results-header">
+              <h3>தேடல் முடிவுகள் (${matchingRows.length})</h3>
+            </div>
+            <div class="service-table-container">
+              <table class="service-table">
+                <thead>
+                  <tr>
+                    <th>மாவட்டம்</th>
+                    <th>தேவாலயம் & தொடர்பு</th>
+                    <th>சேவை நேரங்கள்</th>
+                    <th>இடம்</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${matchingRows.map(({ district, element }) => `
+                    <tr>
+                      <td>${district}</td>
+                      ${element.innerHTML}
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          `;
+        } else {
+          searchResults.innerHTML = `
+            <div class="no-results">
+              <i class="fas fa-search"></i>
+              <p>"${searchTerm}" உடன் பொருந்தும் தேவாலயங்கள் எதுவும் கிடைக்கவில்லை</p>
+            </div>
+          `;
+        }
+      }
+
+      function clearSearch() {
+        const searchInput = document.getElementById('serviceSearch');
+        const districtsGrid = document.getElementById('districtsGrid');
+        const searchResults = document.getElementById('searchResults');
+        
+        searchInput.value = '';
+        districtsGrid.style.display = 'grid';
+        searchResults.style.display = 'none';
+      }
+    </script>
+  </body>
+</html>

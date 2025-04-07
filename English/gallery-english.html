@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Gallery - Holy Army Fellowship</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="../src/images/bg/Logo Png.png" type="image/png">
+    <link rel="stylesheet" href="../src/css/style.css"/>
+    <link rel="stylesheet" href="../src/css/gallery.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="site-title">
+        <a href="home-english.html" class="site-logo">
+          <div class="logo-image">
+            <img src="../src/images/bg/Logo Png.png" alt="Holy Army Fellowship Logo" />
+          </div>
+          <h1>Holy Army Fellowship</h1>
+        </a>
+      </div>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <nav class="main-nav">
+      <button class="nav-close" aria-label="Close navigation">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="nav-container">
+        <div class="nav-links">
+          <a href="home-english.html" class="nav-home">
+            <i class="fas fa-home"></i>
+            Home
+          </a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              <i class="fas fa-scroll"></i>
+              About Us 
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="chosen-english.html">
+                <i class="fas fa-hand-holding-heart"></i>
+                Chosen by God
+              </a>
+              <a href="origin-english.html">
+                <i class="fas fa-history"></i>
+                Origin of Work
+              </a>
+              <a href="faith-english.html">
+                <i class="fas fa-cross"></i>
+                Statement of Faith
+              </a>
+            </div>
+          </div>
+          
+          <a href="gallery-english.html">
+            <i class="fas fa-images"></i>
+            Gallery
+          </a>
+          <a href="videos-english.html">
+            <i class="fas fa-video"></i>
+            Videos
+          </a>
+          <!-- <a href="services-english.html">
+            <i class="fas fa-place-of-worship"></i>
+            Services
+          </a> -->
+          <a href="books-english.html">
+            <i class="fas fa-book-bible"></i>
+            Books
+          </a>
+          <a href="testimonies-english.html">
+            <i class="fas fa-dove"></i>
+            Testimonies
+          </a>
+          <a href="prayer-request-english.html">
+            <i class="fas fa-praying-hands"></i>
+            Prayer Request
+          </a>
+          <a href="FRAMES/index.html">
+            <i class="fas fa-image"></i>
+            Frames
+          </a>
+        </div>
+      </div>
+    </nav>
+
+
+    <main class="gallery-main">
+      <section class="gallery-hero">
+        <div class="gallery-hero-content">
+          <h1>Our Journey in Pictures</h1>
+          <p>Capturing moments of worship, fellowship, and service</p>
+        </div>
+      </section>
+
+      <section class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="worship">Worship</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+        <button class="filter-btn" data-filter="community">Community</button>
+      </section>
+
+      <section class="gallery-grid">
+        <!-- Worship Images -->
+        <div class="gallery-item" data-category="worship">
+          <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80" alt="Sunday Worship Service">
+          <div class="gallery-overlay">
+            <h3>Sunday Worship Service</h3>
+            <p>A moment of praise and worship during our Sunday service</p>
+            <button class="view-btn" onclick="openLightbox(this)">
+              <i class="fas fa-expand"></i>
+              View
+            </button>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="worship">
+          <img src="https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&q=80" alt="Prayer Meeting">
+          <div class="gallery-overlay">
+            <h3>Prayer Meeting</h3>
+            <p>United in prayer during our weekly gathering</p>
+            <button class="view-btn" onclick="openLightbox(this)">
+              <i class="fas fa-expand"></i>
+              View
+            </button>
+          </div>
+        </div>
+
+        <!-- Events Images -->
+        <div class="gallery-item" data-category="events">
+          <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80" alt="Christmas Celebration">
+          <div class="gallery-overlay">
+            <h3>Christmas Celebration</h3>
+            <p>Celebrating the birth of our Savior</p>
+            <button class="view-btn" onclick="openLightbox(this)">
+              <i class="fas fa-expand"></i>
+              View
+            </button>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="events">
+          <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80" alt="Youth Conference">
+          <div class="gallery-overlay">
+            <h3>Youth Conference</h3>
+            <p>Empowering the next generation</p>
+            <button class="view-btn" onclick="openLightbox(this)">
+              <i class="fas fa-expand"></i>
+              View
+            </button>
+          </div>
+        </div>
+
+        <!-- Community Images -->
+        <div class="gallery-item" data-category="community">
+          <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80" alt="Community Outreach">
+          <div class="gallery-overlay">
+            <h3>Community Outreach</h3>
+            <p>Serving our local community with love</p>
+            <button class="view-btn" onclick="openLightbox(this)">
+              <i class="fas fa-expand"></i>
+              View
+            </button>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="community">
+          <img src="https://images.unsplash.com/photo-1523803326055-13445f07c8c9?auto=format&fit=crop&q=80" alt="Fellowship Gathering">
+          <div class="gallery-overlay">
+            <h3>Fellowship Gathering</h3>
+            <p>Building relationships in Christ</p>
+            <button class="view-btn" onclick="openLightbox(this)">
+              <i class="fas fa-expand"></i>
+              View
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <button class="close-lightbox" onclick="closeLightbox()">
+        <i class="fas fa-times"></i>
+      </button>
+      <img id="lightbox-img" src="" alt="">
+      <div class="lightbox-caption">
+        <h3 id="lightbox-title"></h3>
+        <p id="lightbox-description"></p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: info@holyarmyfellowship.org</p>
+          <p>Phone: +91 9999999999</p>
+        </div>
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="https://www.youtube.com/@holyarmyfellowship4726"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Our Location</h3>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2903131521607!2d81.15606487460877!3d16.511434927449184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a361874a5c9d229%3A0xb56ba61ede1af540!2sH.A.F%20Church%20Mandavalli!5e0!3m2!1sen!2sin!4v1737304566845!5m2!1sen!2sin" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../src/js/main.js"></script>
+    <script src="../src/js/gallery.js"></script>
+  </body>
+</html>

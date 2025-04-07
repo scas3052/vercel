@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Analytics - Holy Army Fellowship</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="admin.css" />
+    <link rel="stylesheet" href="analytics.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Add XLSX library -->
+    <script src="https://cdn.sheetjs.com/xlsx-0.18.5/package/dist/xlsx.full.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="site-title">
+        <h1>Holy Army Fellowship - Analytics</h1>
+      </div>
+      <div class="header-controls">
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <nav class="main-nav">
+      <button class="nav-close" aria-label="Close navigation">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="nav-container">
+        <div class="nav-section">
+          <h3>Management</h3>
+          <div class="nav-links">
+            <a href="admin-dashboard.html" class="nav-btn">
+              <i class="fas fa-box"></i>
+              Dashboard
+            </a>
+            <a href="#" class="nav-btn active">
+              <i class="fas fa-chart-line"></i>
+              Analytics
+            </a>
+          </div>
+        </div>
+        <div class="nav-section">
+          <div class="nav-links">
+            <button id="logoutBtn" class="admin-logout">
+              <i class="fas fa-sign-out-alt"></i>
+              Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="admin-dashboard">
+      <div class="admin-container">
+        <section class="analytics-section">
+          <div class="analytics-header">
+            <h3>Analytics Dashboard</h3>
+            <div class="analytics-actions">
+              <button id="exportExcelBtn" class="export-btn">
+                <i class="fas fa-file-excel"></i>
+                Export to Excel
+              </button>
+            </div>
+          </div>
+
+          <div class="analytics-grid">
+            <div class="analytics-card">
+              <h4>User Statistics</h4>
+              <div class="stat-grid">
+                <div class="stat-item">
+                  <span class="stat-label">Total Users</span>
+                  <span class="stat-value" id="totalUsers">0</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-label">Active Users</span>
+                  <span class="stat-value" id="activeUsers">0</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="analytics-card">
+              <h4>Order Statistics</h4>
+              <div class="stat-grid">
+                <div class="stat-item">
+                  <span class="stat-label">Total Orders</span>
+                  <span class="stat-value" id="totalOrders">0</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-label">Total Revenue</span>
+                  <span class="stat-value" id="totalRevenue">₹0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="data-tables">
+            <div class="table-section">
+              <h4>User Data</h4>
+              <div class="table-container">
+                <table class="analytics-table" id="usersTable">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Phone</th>
+                      <th>Orders</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- User data will be loaded here -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div
+              class="table-section"
+              id="userOrdersSection"
+              style="display: none"
+            >
+              <div class="section-header">
+                <h4>Orders for <span id="selectedUserName"></span></h4>
+                <button class="back-btn" onclick="hideUserOrders()">
+                  <i class="fas fa-arrow-left"></i> Back to Users
+                </button>
+              </div>
+              <div class="table-container">
+                <table class="analytics-table" id="userOrdersTable">
+                  <thead>
+                    <tr>
+                      <th>Order ID</th>
+                      <th>Date</th>
+                      <th>Status</th>
+                      <th>Shipping Status</th>
+                      <th>Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- User's orders will be loaded here -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="analytics.js" type="module"></script>
+  </body>
+</html>

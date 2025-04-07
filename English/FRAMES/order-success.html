@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Order Success - Holy Army Fellowship</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="order-success.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header id="main-header">
+    <div class="site-title">
+      <a href="homepage.html"><h1>Holy Army Fellowship Frames</h1></a>
+    </div>
+    <div class="header-controls">
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <button class="nav-close" aria-label="Close navigation">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="nav-container">
+      <div class="nav-links">
+        <a href="homepage.html" class="nav-home">
+          <i class="fas fa-home"></i>
+          Home
+        </a>
+        <a href="profile.html">
+          <i class="fas fa-user"></i>
+          Profile
+        </a>
+        <a href="#help">
+          <i class="fas fa-question-circle"></i>
+          Help
+        </a>
+        <button id="logout">
+          <i class="fas fa-sign-out-alt"></i>
+          Logout
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="success-page">
+    <div class="success-container">
+      <div class="success-header">
+        <div class="success-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h1>Order Placed Successfully!</h1>
+        <p>Thank you for your purchase. Your order has been confirmed.</p>
+      </div>
+
+      <div class="order-details">
+        <div class="order-info">
+          <div class="info-group">
+            <h3>Order Information</h3>
+            <p>Order #: <span id="orderNumber"></span></p>
+            <p>Date: <span id="orderDate"></span></p>
+            <p>Status: <span id="orderStatus" class="status-badge"></span></p>
+            <p>Payment Method: <span id="paymentMethod"></span></p>
+            <p id="paymentIdContainer" style="display: none;">Payment ID: <span id="paymentId"></span></p>
+          </div>
+
+          <div class="info-group">
+            <h3>Shipping Address</h3>
+            <div id="shippingAddress"></div>
+          </div>
+        </div>
+
+        <div class="order-items">
+          <h3>Order Items</h3>
+          <div id="itemsList"></div>
+        </div>
+
+        <div class="order-summary">
+          <div class="summary-row">
+            <span>Subtotal:</span>
+            <span id="subtotal"></span>
+          </div>
+          <div class="summary-row">
+            <span>Tax (18%):</span>
+            <span id="tax"></span>
+          </div>
+          <div class="summary-row total">
+            <span>Total Amount:</span>
+            <span id="total"></span>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button onclick="downloadInvoice()" class="download-btn">
+            <i class="fas fa-download"></i>
+            Download Invoice
+          </button>
+          <a href="homepage.html" class="continue-btn">
+            <i class="fas fa-shopping-bag"></i>
+            Continue Shopping
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: info@holyarmyfellowship.org</p>
+        <p>Phone: +91 9999999999</p>
+      </div>
+      <div class="footer-section">
+        <h3>Connect With Us</h3>
+        <div class="social-links">
+          <a href="https://www.youtube.com/@holyarmyfellowship4726">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Our Location</h3>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2903131521607!2d81.15606487460877!3d16.511434927449184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a361874a5c9d229%3A0xb56ba61ede1af540!2sH.A.F%20Church%20Mandavalli!5e0!3m2!1sen!2sin!4v1737304566845!5m2!1sen!2sin"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="auth.js"></script>
+  <script type="module" src="order-success.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ta">
+  <head>
+    <title>புத்தகங்கள் - புனித ராணுவ ஐக்கியம்</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="../src/images/bg/Logo Png.png" type="image/png">
+    <link rel="stylesheet" href="../src/css/style.css"/>
+    <link rel="stylesheet" href="../src/css/books.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="site-title">
+        <a style="text-decoration: none;" href="home-tamil.html"><h1>புனித ராணுவ ஐக்கியம்</h1></a>
+      </div>
+      <button class="menu-toggle" aria-label="வழிசெலுத்தல் டாகிள்">
+        <i class="fas fa-bars"></i>
+      </button>
+    </header>
+
+    <nav class="main-nav">
+        <button class="nav-close" aria-label="Close navigation">
+            <i class="fas fa-times"></i>
+          </button>
+      <div class="nav-container">
+        <div class="nav-links">
+          <a href="home-tamil.html" class="nav-home">
+            <i class="fas fa-home"></i>
+            முகப்பு
+          </a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              <i class="fas fa-scroll"></i>
+              எங்களைப் பற்றி 
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="chosen-tamil.html">
+                <i class="fas fa-hand-holding-heart"></i>
+                தேவனால் தேர்ந்தெடுக்கப்பட்டவர்
+              </a>
+              <a href="origin-tamil.html">
+                <i class="fas fa-history"></i>
+                வேலையின் தோற்றம்
+              </a>
+              <a href="faith-tamil.html">
+                <i class="fas fa-cross"></i>
+                விசுவாச அறிக்கை
+              </a>
+            </div>
+          </div>
+          
+          <a href="gallery-tamil.html">
+            <i class="fas fa-images"></i>
+            காட்சியகம்
+          </a>
+          <a href="services-tamil.html">
+            <i class="fas fa-place-of-worship"></i>
+            சேவைகள்
+          </a>
+          <a href="books-tamil.html">
+            <i class="fas fa-book-bible"></i>
+            புத்தகங்கள்
+          </a>
+          <a href="testimonies-tamil.html">
+            <i class="fas fa-dove"></i>
+            சாட்சிகள்
+          </a>
+          <a href="prayer-request-tamil.html">
+            <i class="fas fa-praying-hands"></i>
+            ஜெப வேண்டுகோள்
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="books-main">
+      <section class="books-hero">
+        <div class="books-hero-content">
+          <h1>எங்கள் புத்தகங்கள்</h1>
+          <p>உங்கள் விசுவாச பயணத்தை வளப்படுத்தும் ஆன்மீக வளங்கள்</p>
+        </div>
+      </section>
+
+      <section class="books-grid">
+        <div class="book-card">
+          <div class="book-cover">
+            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80" alt="ஜெபத்தின் வல்லமை">
+          </div>
+          <div class="book-info">
+            <h3>ஜெபத்தின் வல்லமை</h3>
+            <p class="author">பாஸ்டர் ஜான் அவர்களால்</p>
+            <p class="description">உங்கள் தினசரி வாழ்க்கையில் ஜெபத்தின் வல்லமையை புரிந்துகொள்ள ஒரு விரிவான வழிகாட்டி.</p>
+            <div class="book-meta">
+              <span><i class="fas fa-book"></i> 250 பக்கங்கள்</span>
+              <span><i class="fas fa-language"></i> தமிழ்</span>
+            </div>
+            <div class="book-actions">
+              <button class="preview-btn" onclick="openPreview('power-of-prayer')">
+                <i class="fas fa-eye"></i>
+                முன்னோட்டம்
+              </button>
+              <a href="#" class="download-btn">
+                <i class="fas fa-download"></i>
+                PDF பதிவிறக்கம்
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="book-cover">
+            <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80" alt="விசுவாசத்தில் நடத்தல்">
+          </div>
+          <div class="book-info">
+            <h3>விசுவாசத்தில் நடத்தல்</h3>
+            <p class="author">பாஸ்டர் டேவிட் அவர்களால்</p>
+            <p class="description">விசுவாச பயணத்தை கண்டறிந்து உங்கள் ஆன்மீக நடைப்பயணத்தை வலுப்படுத்துங்கள்.</p>
+            <div class="book-meta">
+              <span><i class="fas fa-book"></i> 180 பக்கங்கள்</span>
+              <span><i class="fas fa-language"></i> தமிழ்</span>
+            </div>
+            <div class="book-actions">
+              <button class="preview-btn" onclick="openPreview('walking-in-faith')">
+                <i class="fas fa-eye"></i>
+                முன்னோட்டம்
+              </button>
+              <a href="#" class="download-btn">
+                <i class="fas fa-download"></i>
+                PDF பதிவிறக்கம்
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="book-cover">
+            <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&q=80" alt="தினசரி தியானங்கள்">
+          </div>
+          <div class="book-info">
+            <h3>தினசரி தியானங்கள்</h3>
+            <p class="author">புனித ராணுவ ஐக்கியத்தால்</p>
+            <p class="description">உங்கள் ஆன்மீக வளர்ச்சிக்கு ஊக்கமளிக்கும் மற்றும் வழிகாட்டும் 365 தினசரி தியானங்கள்.</p>
+            <div class="book-meta">
+              <span><i class="fas fa-book"></i> 365 பக்கங்கள்</span>
+              <span><i class="fas fa-language"></i> தமிழ்</span>
+            </div>
+            <div class="book-actions">
+              <button class="preview-btn" onclick="openPreview('daily-devotionals')">
+                <i class="fas fa-eye"></i>
+                முன்னோட்டம்
+              </button>
+              <a href="#" class="download-btn">
+                <i class="fas fa-download"></i>
+                PDF பதிவிறக்கம்
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="previewModal" class="preview-modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="previewTitle"></h2>
+          <button class="close-modal" onclick="closePreview()" aria-label="முன்னோட்டத்தை மூடு">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="preview-navigation">
+            <button class="nav-btn prev" onclick="prevPage()" aria-label="முந்தைய பக்கம்">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="page-info">
+              பக்கம் <span id="currentPage">1</span> / <span id="totalPages">5</span>
+            </div>
+            <button class="nav-btn next" onclick="nextPage()" aria-label="அடுத்த பக்கம்">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <div id="previewContent" class="preview-content"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>தொடர்பு கொள்ள</h3>
+          <p>மின்னஞ்சல்: info@holyarmyfellowship.org</p>
+          <p>தொலைபேசி: +91 9999999999</p>
+        </div>
+        <div class="footer-section">
+          <h3>எங்களுடன் இணையுங்கள்</h3>
+          <div class="social-links">
+            <a href="https://www.youtube.com/@holyarmyfellowship4726"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>எங்கள் இடம்</h3>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2903131521607!2d81.15606487460877!3d16.511434927449184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a361874a5c9d229%3A0xb56ba61ede1af540!2sH.A.F%20Church%20Mandavalli!5e0!3m2!1sen!2sin!4v1737304566845!5m2!1sen!2sin" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../src/js/main.js"></script>
+    <script src="../src/js/books.js"></script>
+  </body>
+</html>

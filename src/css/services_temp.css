@@ -1,0 +1,302 @@
+/* Services Page Styles */
+.services-main {
+  padding-top: 8rem;
+  min-height: calc(100vh - 300px);
+}
+
+.services-hero {
+  background: linear-gradient(to right, rgba(44, 74, 124, 0.05), rgba(44, 74, 124, 0.1)); /* Changed to match books page */
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.services-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.services-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Cinzel', serif;
+  color: var(--primary-color);
+}
+
+.services-hero p {
+  font-size: 1.2rem;
+  color: #4a5568;
+}
+
+.services-content {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+}
+
+.state-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.state-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.state-header h2 {
+  font-family: 'Cinzel', serif;
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.state-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.districts-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.district-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.district-header {
+  background: var(--primary-color);
+  color: white;
+  padding: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.district-header:hover {
+  background: #3a5a8c;
+}
+
+.district-header h3 {
+  font-family: 'Cinzel', serif;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.district-header i {
+  transition: transform 0.3s ease;
+}
+
+.district-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.district-card.active .district-content {
+  max-height: 1000px;
+  transition: max-height 0.5s ease-in;
+}
+
+.service-table-container {
+  padding: 2rem;
+}
+
+.service-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.service-table th,
+.service-table td {
+  padding: 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.service-table th {
+  background: #f8f9fa;
+  font-family: 'Cinzel', serif;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.service-table td {
+  line-height: 1.6;
+}
+
+.service-table tr:last-child td {
+  border-bottom: none;
+}
+
+.location-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  font-family: 'Playfair Display', serif;
+}
+
+.location-btn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.location-btn i {
+  font-size: 1.1rem;
+}
+
+/* Add new search styles */
+.search-section {
+  margin-bottom: 2rem;
+}
+
+.search-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #718096;
+}
+
+.search-clear {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #718096;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.search-clear:hover {
+  color: var(--primary-color);
+}
+
+#serviceSearch {
+  width: 100%;
+  padding: 1rem 3rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  font-family: 'Playfair Display', serif;
+}
+
+#serviceSearch:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(44, 74, 124, 0.1);
+}
+
+.search-results {
+  display: none;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.search-results-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.search-results-header h3 {
+  font-family: 'Cinzel', serif;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  color: #718096;
+}
+
+.no-results i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.no-results p {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .services-main {
+    padding-top: 7rem;
+  }
+
+  .services-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .services-hero {
+    padding: 2rem 1rem;
+  }
+
+  .state-header h2 {
+    font-size: 2rem;
+  }
+
+  .service-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .service-table th,
+  .service-table td {
+    padding: 1rem;
+  }
+
+  .district-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .search-container {
+    max-width: 100%;
+  }
+
+  #serviceSearch {
+    font-size: 1rem;
+    padding: 0.875rem 2.5rem;
+  }
+
+  .search-results-header h3 {
+    font-size: 1.2rem;
+  }
+}

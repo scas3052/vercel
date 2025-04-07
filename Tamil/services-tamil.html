@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ta">
+  <head>
+    <title>இடங்கள் - புனித ராணுவ ஐக்கியம்</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="../src/images/bg/Logo Png.png" type="image/png">
+    <link rel="stylesheet" href="../src/css/style.css"/>
+    <link rel="stylesheet" href="../src/css/services.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="site-title">
+        <a style="text-decoration: none;" href="home-tamil.html"><h1>புனித ராணுவ ஐக்கியம்</h1></a>
+      </div>
+        <button class="menu-toggle" aria-label="வழிசெலுத்தல் டாகிள்">
+          <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <nav class="main-nav">
+      <button class="nav-close" aria-label="வழிசெலுத்தலை மூடு">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="nav-container">
+        <div class="nav-links">
+          <a href="home-tamil.html" class="nav-home">
+            <i class="fas fa-home"></i>
+            முகப்பு
+          </a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              <i class="fas fa-scroll"></i>
+              எங்களைப் பற்றி 
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="chosen-tamil.html">
+                <i class="fas fa-hand-holding-heart"></i>
+                தேவனால் தேர்ந்தெடுக்கப்பட்டவர்
+              </a>
+              <a href="origin-tamil.html">
+                <i class="fas fa-history"></i>
+                வேலையின் தோற்றம்
+              </a>
+              <a href="faith-tamil.html">
+                <i class="fas fa-cross"></i>
+                விசுவாச அறிக்கை
+              </a>
+            </div>
+          </div>
+          
+          <a href="gallery-tamil.html">
+            <i class="fas fa-images"></i>
+            காட்சியகம்
+          </a>
+          <a href="services-tamil.html">
+            <i class="fas fa-place-of-worship"></i>
+            சேவைகள்
+          </a>
+          <a href="books-tamil.html">
+            <i class="fas fa-book-bible"></i>
+            புத்தகங்கள்
+          </a>
+          <a href="testimonies-tamil.html">
+            <i class="fas fa-dove"></i>
+            சாட்சிகள்
+          </a>
+          <a href="prayer-request-tamil.html">
+            <i class="fas fa-praying-hands"></i>
+            ஜெப வேண்டுகோள்
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="locations-main">
+      <section class="locations-hero">
+        <div class="locations-hero-content">
+          <h1>எங்கள் இடங்கள்</h1>
+          <p>ஆந்திர பிரதேசம் மற்றும் தெலுங்கானாவில் உள்ள எங்கள் பல இடங்களில் ஒன்றில் இணையுங்கள்</p>
+          <div class="locations-stats">
+            <div class="stat-item">
+              <i class="fas fa-church"></i>
+              <span class="stat-number">200+</span>
+              <span class="stat-label">தேவாலயங்கள்</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-map-marked-alt"></i>
+              <span class="stat-number">10</span>
+              <span class="stat-label">மாவட்டங்கள்</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-users"></i>
+              <span class="stat-number">10000+</span>
+              <span class="stat-label">உறுப்பினர்கள்</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="search-container">
+        <input 
+          type="text" 
+          class="search-input" 
+          placeholder="தேவாலய பெயர், முகவரி, பாதிரியார் பெயர், அல்லது தொலைபேசி எண் மூலம் தேடுங்கள்..."
+          id="churchSearch"
+        >
+      </div>
+
+      <section class="locations-filters">
+        <button class="region-btn active" data-region="all">அனைத்து பகுதிகள்</button>
+        <button class="region-btn" data-region="andhra">ஆந்திர பிரதேசம்</button>
+        <button class="region-btn" data-region="telangana">தெலுங்கானா</button>
+      </section>
+
+      <div class="no-results">
+        உங்கள் தேடல் அளவுகோல்களுடன் பொருந்தும் தேவாலயங்கள் எதுவும் கிடைக்கவில்லை
+      </div>
+
+      <section class="district-section" data-region="andhra">
+        <h2 class="state-title">
+          <i class="fas fa-map-marked-alt"></i>
+          ஆந்திர பிரதேசம்
+        </h2>
+        
+        <div class="district-container">
+          <div class="district-header">
+            <h3>
+              <i class="fas fa-chevron-down"></i>
+              கிருஷ்ணா மாவட்டம்
+            </h3>
+            <span class="church-count">2 தேவாலயங்கள்</span>
+          </div>
+          <div class="locations-grid">
+            <div class="location-card">
+              <span class="region-label">கிருஷ்ணா</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  HAF தேவாலயம் விஜயவாடா
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>பாதிரியார் ஜான் டோ</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>123 சர்ச் தெரு, விஜயவாடா</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999991</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> ஆராதனை நேரங்கள்</h4>
+                  <ul>
+                    <li><span>ஞாயிறு ஆராதனை</span><span>காலை 10:00</span></li>
+                    <li><span>புதன் ஜெபம்</span><span>மாலை 6:30</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <a href="https://maps.google.com" target="_blank" class="action-btn directions-btn">
+                    <i class="fas fa-directions"></i>
+                    வழிகாட்டுதல்கள்
+                  </a>
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    தொடர்பு கொள்ள
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="location-card">
+              <span class="region-label">கிருஷ்ணா</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  HAF தேவ ாலயம் மச்சிலிப்பட்டினம்
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>பாதிரியார் ஜேன் ஸ்மித்</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>456 கோயில் தெரு, மச்சிலிப்பட்டினம்</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999992</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> ஆராதனை நேரங்கள்</h4>
+                  <ul>
+                    <li><span>ஞாயிறு ஆராதனை</span><span>காலை 9:30</span></li>
+                    <li><span>வெள்ளி ஜெபம்</span><span>மாலை 7:00</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <a href="https://maps.google.com" target="_blank" class="action-btn directions-btn">
+                    <i class="fas fa-directions"></i>
+                    வழிகாட்டுதல்கள்
+                  </a>
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    தொடர்பு கொள்ள
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="district-container">
+          <div class="district-header">
+            <h3>
+              <i class="fas fa-chevron-down"></i>
+              கண்டூர் மாவட்டம்
+            </h3>
+            <span class="church-count">2 தேவாலயங்கள்</span>
+          </div>
+          <div class="locations-grid">
+            <div class="location-card">
+              <span class="region-label">கண்டூர்</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  HAF தேவாலயம் கண்டூர் நகரம்
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>பாதிரியார் மைக்கேல் ஜான்சன்</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>789 சர்ச் சாலை, கண்டூர்</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999993</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> ஆராதனை நேரங்கள்</h4>
+                  <ul>
+                    <li><span>ஞாயிறு ஆராதனை</span><span>காலை 10:00</span></li>
+                    <li><span>வியாழன் ஜெபம்</span><span>மாலை 6:00</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <a href="https://maps.google.com" target="_blank" class="action-btn directions-btn">
+                    <i class="fas fa-directions"></i>
+                    வழிகாட்டுதல்கள்
+                  </a>
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    தொடர்பு கொள்ள
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="location-card">
+              <span class="region-label">கண்டூர்</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  HAF தேவாலயம் தெனாலி
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>பாதிரியார் சாரா வில்லியம்ஸ்</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>101 கோயில் தெரு, தெனாலி</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999994</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> ஆராதனை நேரங்கள்</h4>
+                  <ul>
+                    <li><span>ஞாயிறு ஆராதனை</span><span>காலை 9:30</span></li>
+                    <li><span>புதன் ஜெபம்</span><span>மாலை 7:00</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <a href="https://maps.google.com" target="_blank" class="action-btn directions-btn">
+                    <i class="fas fa-directions"></i>
+                    வழிகாட்டுதல்கள்
+                  </a>
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    தொடர்பு கொள்ள
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="district-section" data-region="telangana">
+        <h2 class="state-title">
+          <i class="fas fa-map-marked-alt"></i>
+          தெலுங்கானா
+        </h2>
+        
+        <div class="district-container">
+          <div class="district-header">
+            <h3>
+              <i class="fas fa-chevron-down"></i>
+              ஹைதராபாத் மாவட்டம்
+            </h3>
+            <span class="church-count">2 தேவாலயங்கள்</span>
+          </div>
+          <div class="locations-grid">
+            <div class="location-card">
+              <span class="region-label">ஹைதராபாத்</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  HAF தேவாலயம் சிக்கந்தராபாத்
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>பாதிரியார் டேவிட் பிரவுன்</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>123 சாப்பல் சாலை, சிக்கந்தராபாத்</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999995</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> ஆராதனை நேரங்கள்</h4>
+                  <ul>
+                    <li><span>ஞாயிறு ஆராதனை</span><span>காலை 10:00</span></li>
+                    <li><span>செவ்வாய் ஜெபம்</span><span>மாலை 6:30</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <a href="https://maps.google.com" target="_blank" class="action-btn directions-btn">
+                    <i class="fas fa-directions"></i>
+                    வழிகாட்டுதல்கள்
+                  </a>
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    தொடர்பு கொள்ள
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="location-card">
+              <span class="region-label">ஹைதராபாத்</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  HAF தேவாலயம் குக்கட்பள்ளி
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>பாதிரியார் ராபர்ட் வில்சன்</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>456 கோயில் தெரு, குக்கட்பள்ளி</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999996</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> ஆராதனை நேரங்கள்</h4>
+                  <ul>
+                    <li><span>ஞாயிறு ஆராதனை</span><span>காலை 9:30</span></li>
+                    <li><span>வெள்ளி ஜெபம்</span><span>மாலை 7:00</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <a href="https://maps.google.com" target="_blank" class="action-btn directions-btn">
+                    <i class="fas fa-directions"></i>
+                    வழிகாட்டுதல்கள்
+                  </a>
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    தொடர்பு கொள்ள
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>தொடர்பு கொள்ள</h3>
+          <p>மின்னஞ்சல்: info@holyarmyfellowship.org</p>
+          <p>தொலைபேசி: +91 9999999999</p>
+        </div>
+        <div class="footer-section">
+          <h3>எங்களுடன் இணையுங்கள்</h3>
+          <div class="social-links">
+            <a href="https://www.youtube.com/@holyarmyfellowship4726"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>எங்கள் இடம்</h3>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2903131521607!2d81.15606487460877!3d16.511434927449184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a361874a5c9d229%3A0xb56ba61ede1af540!2sH.A.F%20Church%20Mandavalli!5e0!3m2!1sen!2sin!4v1737304566845!5m2!1sen!2sin" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../src/js/main.js"></script>
+    <script src="../src/js/services.js"></script>
+  </body>
+</html>

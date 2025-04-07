@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <title>पुस्तकें - पवित्र सेना संगति</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="../src/images/bg/Logo Png.png" type="image/png">
+    <link rel="stylesheet" href="../src/css/style.css"/>
+    <link rel="stylesheet" href="../src/css/books.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="site-title">
+        <a style="text-decoration: none;" href="home-hindi.html"><h1>पवित्र सेना संगति</h1></a>
+      </div>
+      <button class="menu-toggle" aria-label="नेविगेशन टॉगल">
+        <i class="fas fa-bars"></i>
+      </button>
+    </header>
+
+    <nav class="main-nav">
+        <button class="nav-close" aria-label="Close navigation">
+            <i class="fas fa-times"></i>
+          </button>
+      <div class="nav-container">
+        <div class="nav-links">
+          <a href="home-hindi.html" class="nav-home">
+            <i class="fas fa-home"></i>
+            होम
+          </a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              <i class="fas fa-scroll"></i>
+              हमारे बारे में 
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="chosen-hindi.html">
+                <i class="fas fa-hand-holding-heart"></i>
+                भगवान द्वारा चुने गए
+              </a>
+              <a href="origin.html">
+                <i class="fas fa-history"></i>
+                कार्य की उत्पत्ति
+              </a>
+              <a href="faith.html">
+                <i class="fas fa-cross"></i>
+                विश्वास का वक्तव्य
+              </a>
+            </div>
+          </div>
+          
+          <a href="gallery-hindi.html">
+            <i class="fas fa-images"></i>
+            गैलरी
+          </a>
+          <a href="services-hindi.html">
+            <i class="fas fa-place-of-worship"></i>
+            सेवाएं
+          </a>
+          <a href="books-hindi.html">
+            <i class="fas fa-book-bible"></i>
+            पुस्तकें
+          </a>
+          <a href="testimonies-hindi.html">
+            <i class="fas fa-dove"></i>
+            गवाहियां
+          </a>
+          <a href="prayer-request-hindi.html">
+            <i class="fas fa-praying-hands"></i>
+            प्रार्थना अनुरोध
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="books-main">
+      <section class="books-hero">
+        <div class="books-hero-content">
+          <h1>हमारी पुस्तकें</h1>
+          <p>आपकी विश्वास यात्रा को समृद्ध करने के लिए आध्यात्मिक संसाधन</p>
+        </div>
+      </section>
+
+      <section class="books-grid">
+        <div class="book-card">
+          <div class="book-cover">
+            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80" alt="प्रार्थना की शक्ति">
+          </div>
+          <div class="book-info">
+            <h3>प्रार्थना की शक्ति</h3>
+            <p class="author">पास्टर जॉन द्वारा</p>
+            <p class="description">आपके दैनिक जीवन में प्रार्थना की शक्ति को समझने के लिए एक व्यापक मार्गदर्शिका।</p>
+            <div class="book-meta">
+              <span><i class="fas fa-book"></i> 250 पृष्ठ</span>
+              <span><i class="fas fa-language"></i> हिंदी</span>
+            </div>
+            <div class="book-actions">
+              <button class="preview-btn" onclick="openPreview('power-of-prayer')">
+                <i class="fas fa-eye"></i>
+                पूर्वावलोकन
+              </button>
+              <a href="#" class="download-btn">
+                <i class="fas fa-download"></i>
+                पीडीएफ डाउनलोड करें
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="book-cover">
+            <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80" alt="विश्वास में चलना">
+          </div>
+          <div class="book-info">
+            <h3>विश्वास में चलना</h3>
+            <p class="author">पास्टर डेविड द्वारा</p>
+            <p class="description">विश्वास की यात्रा की खोज करें और अपनी आध्यात्मिक यात्रा को मजबूत करें।</p>
+            <div class="book-meta">
+              <span><i class="fas fa-book"></i> 180 पृष्ठ</span>
+              <span><i class="fas fa-language"></i> हिंदी</span>
+            </div>
+            <div class="book-actions">
+              <button class="preview-btn" onclick="openPreview('walking-in-faith')">
+                <i class="fas fa-eye"></i>
+                पूर्वावलोकन
+              </button>
+              <a href="#" class="download-btn">
+                <i class="fas fa-download"></i>
+                पीडीएफ डाउनलोड करें
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="book-cover">
+            <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&q=80" alt="दैनिक भक्ति">
+          </div>
+          <div class="book-info">
+            <h3>दैनिक भक्ति</h3>
+            <p class="author">पवित्र सेना संगति द्वारा</p>
+            <p class="description">आपकी आध्यात्मिक वृद्धि को प्रेरित करने और मार्गदर्शन करने के लिए 365 दैनिक भक्ति।</p>
+            <div class="book-meta">
+              <span><i class="fas fa-book"></i> 365 पृष्ठ</span>
+              <span><i class="fas fa-language"></i> हिंदी</span>
+            </div>
+            <div class="book-actions">
+              <button class="preview-btn" onclick="openPreview('daily-devotionals')">
+                <i class="fas fa-eye"></i>
+                पूर्वावलोकन
+              </button>
+              <a href="#" class="download-btn">
+                <i class="fas fa-download"></i>
+                पीडीएफ डाउनलोड करें
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="previewModal" class="preview-modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="previewTitle"></h2>
+          <button class="close-modal" onclick="closePreview()" aria-label="पूर्वावलोकन बंद करें">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="preview-navigation">
+            <button class="nav-btn prev" onclick="prevPage()" aria-label="पिछला पृष्ठ">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="page-info">
+              पृष्ठ <span id="currentPage">1</span> / <span id="totalPages">5</span>
+            </div>
+            <button class="nav-btn next" onclick="nextPage()" aria-label="अगला पृष्ठ">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <div id="previewContent" class="preview-content"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>संपर्क करें</h3>
+          <p>ईमेल: info@holyarmyfellowship.org</p>
+          <p>फोन: +91 9999999999</p>
+        </div>
+        <div class="footer-section">
+          <h3>हमसे जुड़ें</h3>
+          <div class="social-links">
+            <a href="https://www.youtube.com/@holyarmyfellowship4726"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>हमारा स्थान</h3>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2903131521607!2d81.15606487460877!3d16.511434927449184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a361874a5c9d229%3A0xb56ba61ede1af540!2sH.A.F%20Church%20Mandavalli!5e0!3m2!1sen!2sin!4v1737304566845!5m2!1sen!2sin" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../src/js/main.js"></script>
+    <script src="../src/js/books.js"></script>
+  </body>
+</html>

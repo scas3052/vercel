@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="te">
+  <head>
+    <title>ప్రాంతాలు - పరిశుద్ధ సైనిక సహవాసం</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="../src/images/bg/Logo Png.png" type="image/png">
+    <link rel="stylesheet" href="../src/css/style.css"/>
+    <link rel="stylesheet" href="../src/css/services.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="site-title">
+        <a style="text-decoration: none;" href="home-telugu.html"><h1>పరిశుద్ధ సైనిక సహవాసం</h1></a>
+      </div>
+        <button class="menu-toggle" aria-label="నావిగేషన్ టోగుల్">
+          <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <nav class="main-nav">
+      <button class="nav-close" aria-label="నావిగేషన్ మూసివేయి">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="nav-container">
+        <div class="nav-links">
+          <a href="home-telugu.html" class="nav-home">
+            <i class="fas fa-home"></i>
+            హోమ్
+          </a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              <i class="fas fa-scroll"></i>
+              మా గురించి 
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="chosen-telugu.html">
+                <i class="fas fa-hand-holding-heart"></i>
+                దేవునిచే ఎంచుకోబడిన
+              </a>
+              <a href="origin-telugu.html">
+                <i class="fas fa-history"></i>
+                పని యొక్క మూలం
+              </a>
+              <a href="faith-telugu.html">
+                <i class="fas fa-cross"></i>
+                విశ్వాస ప్రకటన
+              </a>
+            </div>
+          </div>
+          
+          <a href="gallery-telugu.html">
+            <i class="fas fa-images"></i>
+            గ్యాలరీ
+          </a>
+          <a href="services-telugu.html">
+            <i class="fas fa-place-of-worship"></i>
+            సేవలు
+          </a>
+          <a href="books-telugu.html">
+            <i class="fas fa-book-bible"></i>
+            పుస్తకాలు
+          </a>
+          <a href="testimonies-telugu.html">
+            <i class="fas fa-dove"></i>
+            సాక్ష్యాలు
+          </a>
+          <a href="prayer-request-telugu.html">
+            <i class="fas fa-praying-hands"></i>
+            ప్రార్థన అభ్యర్థన
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="locations-main">
+      <section class="locations-hero">
+        <div class="locations-hero-content">
+          <h1>మా ప్రాంతాలు</h1>
+          <p>ఆంధ్రప్రదేశ్ మరియు తెలంగాణలోని మా అనేక ప్రాంతాలలో మాతో చేరండి</p>
+          <div class="locations-stats">
+            <div class="stat-item">
+              <i class="fas fa-church"></i>
+              <span class="stat-number">200+</span>
+              <span class="stat-label">చర్చిలు</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-map-marked-alt"></i>
+              <span class="stat-number">10</span>
+              <span class="stat-label">జిల్లాలు</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-users"></i>
+              <span class="stat-number">10000+</span>
+              <span class="stat-label">సభ్యులు</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="search-container">
+        <input 
+          type="text" 
+          class="search-input" 
+          placeholder="చర్చి పేరు, చిరునామా, పాస్టర్ పేరు, లేదా ఫోన్ నంబర్ ద్వారా వెతకండి..."
+          id="churchSearch"
+        >
+      </div>
+
+      <section class="locations-filters">
+        <button class="region-btn active" data-region="all">అన్ని ప్రాంతాలు</button>
+        <button class="region-btn" data-region="andhra">ఆంధ్రప్రదేశ్</button>
+        <button class="region-btn" data-region="telangana">తెలంగాణ</button>
+      </section>
+
+      <div class="no-results">
+        మీ శోధన ప్రమాణాలకు సరిపోలే చర్చిలు ఏవీ కనుగొనబడలేదు
+      </div>
+
+      <section class="district-section" data-region="andhra">
+        <h2 class="state-title">
+          <i class="fas fa-map-marked-alt"></i>
+          ఆంధ్రప్రదేశ్
+        </h2>
+        
+        <div class="district-container">
+          <div class="district-header">
+            <h3>
+              <i class="fas fa-chevron-down"></i>
+              కృష్ణా జిల్లా
+            </h3>
+            <span class="church-count">2 చర్చిలు</span>
+          </div>
+          <div class="locations-grid">
+            <div class="location-card">
+              <span class="region-label">కృష్ణా</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  పరిశుద్ధ సైనిక సహవాసం చర్చి విజయవాడ
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>పాస్టర్ జాన్ డో</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>123 చర్చి వీధి, విజయవాడ</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999991</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> ఆరాధన సమయాలు</h4>
+                  <ul>
+                    <li><span>ఆదివారపు ఆరాధన</span><span>ఉదయం 10:00</span></li>
+                    <li><span>బుధవారం ప్రార్థన</span><span>సాయంత్రం 6:30</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <a href="https://maps.google.com" target="_blank" class="action-btn directions-btn">
+                    <i class="fas fa-directions"></i>
+                    మార్గ నిర్దేశాలు
+                  </a>
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    సంప్రదించండి
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="location-card">
+              <span class="region-label">కృష్ణా</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  పరిశుద్ధ సైనిక సహవాసం చర్చి మచిలీపట్నం
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>పాస్టర్ జేన్ స్మిత్</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>456 దేవాలయం వీధి, మచిలీపట్నం</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999992</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> ఆరాధన సమయాలు</h4>
+                  <ul>
+                    <li><span>ఆదివారపు ఆరాధన</span><span>ఉదయం 9:30</span></li>
+                    <li><span>శుక్రవారం ప్రార్థన</span><span>సాయంత్రం 7:00</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <a href="https://maps.google.com" target="_blank" class="action-btn directions-btn">
+                    <i class="fas fa-directions"></i>
+                    మార్గ నిర్దేశాలు
+                  </a>
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    సంప్రదించండి
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="district-container">
+          <div class="district-header">
+            <h3>
+              <i class="fas fa-chevron-down"></i>
+              గుంటూరు జిల్లా
+            </h3>
+            <span class="church-count">2 చర్చిలు</span>
+          </div>
+          <div class="locations-grid">
+            <div class="location-card">
+              <span class="region-label">గుంటూరు</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  పరిశుద్ధ సైనిక సహవాసం చర్చి గుంటూరు సిటీ
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>పాస్టర్ మైకేల్ జాన్సన్</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>789 చర్చి రోడ్, గుంటూరు</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999993</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> ఆరాధన సమయాలు</h4>
+                  <ul>
+                    <li><span>ఆదివారపు ఆరాధన</span><span>ఉదయం 10:00</span></li>
+                    <li><span>గురువారం ప్రార్థన</span><span>సాయంత్రం 6:00</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <a href="https://maps.google.com" target="_blank" class="action-btn directions-btn">
+                    <i class="fas fa-directions"></i>
+                    మార్గ నిర్దేశాలు
+                  </a>
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    సంప్రదించండి
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="location-card">
+              <span class="region-label">గుంటూరు</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  పరిశుద్ధ సైనిక సహవాసం చర్చి తెనాలి
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>పాస్టర్ సారా విలియమ్స్</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>101 దేవాలయం వీధి, తెనాలి</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999994</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> ఆరాధన సమయాలు</h4>
+                  <ul>
+                    <li><span>ఆదివారపు ఆరాధన</span><span>ఉదయం 9:30</span></li>
+                    <li><span>బుధవారం ప్రార్థన</span><span>సాయంత్రం 7:00</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <a href="https://maps.google.com" target="_blank" class="action-btn directions-btn">
+                    <i class="fas fa-directions"></i>
+                    మార్గ నిర్దేశాలు
+                  </a>
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    సంప్రదించండి
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="district-section" data-region="telangana">
+        <h2 class="state-title">
+          <i class="fas fa-map-marked-alt"></i>
+          తెలంగాణ
+        </h2>
+        
+        <div class="district-container">
+          <div class="district-header">
+            <h3>
+              <i class="fas fa-chevron-down"></i>
+              హైదరాబాద్ జిల్లా
+            </h3>
+            <span class="church-count">2 చర్చిలు</span>
+          </div>
+          <div class="locations-grid">
+            <div class="location-card">
+              <span class="region-label">హైదరాబాద్</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  పరిశుద్ధ సైనిక సహవాసం చర్చి సికింద్రాబాద్
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>పాస్టర్ డేవిడ్ బ్రౌన్</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>123 చాపెల్ రోడ్, సికింద్రాబాద్</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999995</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> ఆరాధన సమయాలు</h4>
+                  <ul>
+                    <li><span>ఆదివారపు ఆరాధన</span><span>ఉదయం 10:00</span></li>
+                    <li><span>మంగళవారం ప్రార్థన</span><span>సాయంత్రం 6:30</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <a href="https://maps.google.com" target="_blank" class="action-btn directions-btn">
+                    <i class="fas fa-directions"></i>
+                    మార్గ నిర్దేశాలు
+                  </a>
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    సంప్రదించండి
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="location-card">
+              <span class="region-label">హైదరాబాద్</span>
+              <div class="location-content">
+                <h3 class="location-title">
+                  <i class="fas fa-church"></i>
+                  పరిశుద్ధ సైనిక సహవాసం చర్చి కుకట్‌పల్లి
+                </h3>
+                <div class="pastor-info">
+                  <i class="fas fa-user-tie"></i>
+                  <span>పాస్టర్ రాబర్ట్ విల్సన్</span>
+                </div>
+                <div class="location-details">
+                  <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>456 దేవాలయం వీధి, కుకట్‌పల్లి</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9999999996</span>
+                  </div>
+                </div>
+                <div class="service-times">
+                  <h4><i class="fas fa-clock"></i> ఆరాధన సమయాలు</h4>
+                  <ul>
+                    <li><span>ఆదివారపు ఆరాధన</span><span>ఉదయం 9:30</span></li>
+                    <li><span>శుక్రవారం ప్రార్థన</span><span>సాయంత్రం 7:00</span></li>
+                  </ul>
+                </div>
+                <div class="location-actions">
+                  <a href="https://maps.google.com" target="_blank" class="action-btn directions-btn">
+                    <i class="fas fa-directions"></i>
+                    మార్గ నిర్దేశాలు
+                  </a>
+                  <button class="action-btn contact-btn">
+                    <i class="fas fa-phone"></i>
+                    సంప్రదించండి
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>సంప్రదించండి</h3>
+          <p>ఇమెయిల్: info@holyarmyfellowship.org</p>
+          <p>ఫోన్: +91 9999999999</p>
+        </div>
+        <div class="footer-section">
+          <h3>మాతో అనుసంధానం అవ్వండి</h3>
+          <div class="social-links">
+            <a href="https://www.youtube.com/@holyarmyfellowship4726"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>మా స్థానం</h3>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2903131521607!2d81.15606487460877!3d16.511434927449184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a361874a5c9d229%3A0xb56ba61ede1af540!2sH.A.F%20Church%20Mandavalli!5e0!3m2!1sen!2sin!4v1737304566845!5m2!1sen!2sin" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../src/js/main.js"></script>
+    <script src="../src/js/services.js"></script>
+
+  </body>
+</html>

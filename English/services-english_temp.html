@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Our Services - Holy Army Fellowship</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="../src/images/bg/Logo Png.png" type="image/png">
+    <link rel="stylesheet" href="../src/css/style.css"/>
+    <link rel="stylesheet" href="../src/css/services.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="site-title">
+        <a href="home-english.html" class="site-logo">
+          <div class="logo-image">
+            <img src="../src/images/bg/Logo Png.png" alt="Holy Army Fellowship Logo" />
+          </div>
+          <h1>Holy Army Fellowship</h1>
+        </a>
+      </div>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <nav class="main-nav">
+      <button class="nav-close" aria-label="Close navigation">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="nav-container">
+        <div class="nav-links">
+          <a href="home-english.html" class="nav-home">
+            <i class="fas fa-home"></i>
+            Home
+          </a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              <i class="fas fa-scroll"></i>
+              About Us 
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="chosen-english.html">
+                <i class="fas fa-hand-holding-heart"></i>
+                Chosen by God
+              </a>
+              <a href="origin-english.html">
+                <i class="fas fa-history"></i>
+                Origin of Work
+              </a>
+              <a href="faith-english.html">
+                <i class="fas fa-cross"></i>
+                Statement of Faith
+              </a>
+            </div>
+          </div>
+          
+          <a href="gallery-english.html">
+            <i class="fas fa-images"></i>
+            Gallery
+          </a>
+          <a href="videos-english.html">
+            <i class="fas fa-video"></i>
+            Videos
+          </a>
+          <a href="services-english.html">
+            <i class="fas fa-place-of-worship"></i>
+            Services
+          </a>
+          <a href="books-english.html">
+            <i class="fas fa-book-bible"></i>
+            Books
+          </a>
+          <a href="testimonies-english.html">
+            <i class="fas fa-dove"></i>
+            Testimonies
+          </a>
+          <a href="prayer-request-english.html">
+            <i class="fas fa-praying-hands"></i>
+            Prayer Request
+          </a>
+          <a href="FRAMES/index.html">
+            <i class="fas fa-image"></i>
+            Frames
+          </a>
+        </div>
+      </div>
+    </nav>
+
+
+    <main class="services-main">
+      <section class="services-hero">
+        <div class="services-hero-content">
+          <h1>Our Services</h1>
+          <p>Join us in worship across Andhra Pradesh</p>
+        </div>
+      </section>
+
+      <section class="services-content">
+        <div class="state-container">
+          <div class="state-header">
+            <h2>Andhra Pradesh</h2>
+            <p>Select a district to view service locations</p>
+          </div>
+
+          <!-- Search Section -->
+          <div class="search-section">
+            <div class="search-container">
+              <i class="fas fa-search search-icon"></i>
+              <input 
+                type="text" 
+                id="serviceSearch" 
+                placeholder="Search by church name, pastor, or phone number..."
+                onkeyup="searchServices()"
+              >
+              <button class="search-clear" onclick="clearSearch()">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="search-results" id="searchResults"></div>
+          </div>
+          
+          <div class="districts-grid" id="districtsGrid">
+            <!-- Anantapur District -->
+            <div class="district-card" data-district="Anantapur">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>Anantapur District</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>Church & Contact</th>
+                        <th>Service Timings</th>
+                        <th>Location</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="haf church anantapur pastor samuel 9876543213">
+                        <td>
+                          <strong>HAF Church Anantapur</strong><br>
+                          Pastor Samuel<br>
+                          +91 9876543213
+                        </td>
+                        <td>
+                          Sunday: 9:00 AM<br>
+                          Wednesday: 7:00 PM<br>
+                          Friday: 6:30 PM
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            View Map
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- East Godavari District -->
+            <div class="district-card" data-district="East Godavari">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>East Godavari District</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>Church & Contact</th>
+                        <th>Service Timings</th>
+                        <th>Location</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="haf church rajahmundry pastor joseph 9876543214">
+                        <td>
+                          <strong>HAF Church Rajahmundry</strong><br>
+                          Pastor Joseph<br>
+                          +91 9876543214
+                        </td>
+                        <td>
+                          Sunday: 10:30 AM<br>
+                          Tuesday: 6:30 PM<br>
+                          Thursday: 7:00 PM
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            View Map
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Guntur District -->
+            <div class="district-card" data-district="Guntur">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>Guntur District</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>Church & Contact</th>
+                        <th>Service Timings</th>
+                        <th>Location</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="haf church guntur pastor david 9876543211">
+                        <td>
+                          <strong>HAF Church Guntur</strong><br>
+                          Pastor David<br>
+                          +91 9876543211
+                        </td>
+                        <td>
+                          Sunday: 9:30 AM<br>
+                          Tuesday: 6:00 PM<br>
+                          Thursday: 7:00 PM
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            View Map
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Krishna District -->
+            <div class="district-card" data-district="Krishna">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>Krishna District</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>Church & Contact</th>
+                        <th>Service Timings</th>
+                        <th>Location</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="haf church mandavalli pastor john 9876543210">
+                        <td>
+                          <strong>HAF Church Mandavalli</strong><br>
+                          Pastor John<br>
+                          +91 9876543210
+                        </td>
+                        <td>
+                          Sunday: 10:00 AM<br>
+                          Wednesday: 6:30 PM<br>
+                          Friday: 7:00 PM
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            View Map
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Prakasam District -->
+            <div class="district-card" data-district="Prakasam">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>Prakasam District</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>Church & Contact</th>
+                        <th>Service Timings</th>
+                        <th>Location</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="haf church ongole pastor thomas 9876543215">
+                        <td>
+                          <strong>HAF Church Ongole</strong><br>
+                          Pastor Thomas<br>
+                          +91 9876543215
+                        </td>
+                        <td>
+                          Sunday: 10:00 AM<br>
+                          Monday: 7:00 PM<br>
+                          Saturday: 6:30 PM
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            View Map
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Visakhapatnam District -->
+            <div class="district-card" data-district="Visakhapatnam">
+              <div class="district-header" onclick="toggleDistrict(this)">
+                <h3>Visakhapatnam District</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="district-content">
+                <div class="service-table-container">
+                  <table class="service-table">
+                    <thead>
+                      <tr>
+                        <th>Church & Contact</th>
+                        <th>Service Timings</th>
+                        <th>Location</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-search="haf church vizag pastor peter 9876543216">
+                        <td>
+                          <strong>HAF Church Vizag</strong><br>
+                          Pastor Peter<br>
+                          +91 9876543216
+                        </td>
+                        <td>
+                          Sunday: 9:00 AM<br>
+                          Wednesday: 7:00 PM<br>
+                          Friday: 6:00 PM
+                        </td>
+                        <td>
+                          <button class="location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            View Map
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: info@holyarmyfellowship.org</p>
+          <p>Phone: +91 9999999999</p>
+        </div>
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="https://www.youtube.com/@holyarmyfellowship4726"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Our Location</h3>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.2903131521607!2d81.15606487460877!3d16.511434927449184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a361874a5c9d229%3A0xb56ba61ede1af540!2sH.A.F%20Church%20Mandavalli!5e0!3m2!1sen!2sin!4v1737304566845!5m2!1sen!2sin" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../src/js/main.js"></script>
+    <script>
+      function toggleDistrict(header) {
+        const card = header.parentElement;
+        const content = card.querySelector('.district-content');
+        const icon = header.querySelector('.fa-chevron-down');
+        
+        // Close all other districts
+        document.querySelectorAll('.district-card').forEach(otherCard => {
+          if (otherCard !== card && otherCard.classList.contains('active')) {
+            otherCard.classList.remove('active');
+            otherCard.querySelector('.fa-chevron-down').style.transform = 'rotate(0deg)';
+          }
+        });
+
+        // Toggle current district
+        card.classList.toggle('active');
+        icon.style.transform = card.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+      }
+
+      function searchServices() {
+        const searchInput = document.getElementById('serviceSearch');
+        const searchTerm = searchInput.value.toLowerCase();
+        const districtsGrid = document.getElementById('districtsGrid');
+        const searchResults = document.getElementById('searchResults');
+        
+        if (searchTerm.length === 0) {
+          districtsGrid.style.display = 'grid';
+          searchResults.style.display = 'none';
+          return;
+        }
+
+        const allRows = document.querySelectorAll('tr[data-search]');
+        const matchingRows = [];
+
+        allRows.forEach(row => {
+          const searchData = row.getAttribute('data-search').toLowerCase();
+          if (searchData.includes(searchTerm)) {
+            const district = row.closest('.district-card').getAttribute('data-district');
+            const rowClone = row.cloneNode(true);
+            matchingRows.push({ district, element: rowClone });
+          }
+        });
+
+        if (matchingRows.length > 0) {
+          districtsGrid.style.display = 'none';
+          searchResults.style.display = 'block';
+          searchResults.innerHTML = `
+            <div class="search-results-header">
+              <h3>Search Results (${matchingRows.length})</h3>
+            </div>
+            <div class="service-table-container">
+              <table class="service-table">
+                <thead>
+                  <tr>
+                    <th>District</th>
+                    <th>Church & Contact</th>
+                    <th>Service Timings</th>
+                    <th>Location</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${matchingRows.map(({ district, element }) => `
+                    <tr>
+                      <td>${district}</td>
+                      ${element.innerHTML}
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          `;
+        } else {
+          searchResults.innerHTML = `
+            <div class="no-results">
+              <i class="fas fa-search"></i>
+              <p>No churches found matching "${searchTerm}"</p>
+            </div>
+          `;
+        }
+      }
+
+      function clearSearch() {
+        const searchInput = document.getElementById('serviceSearch');
+        const districtsGrid = document.getElementById('districtsGrid');
+        const searchResults = document.getElementById('searchResults');
+        
+        searchInput.value = '';
+        districtsGrid.style.display = 'grid';
+        searchResults.style.display = 'none';
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,205 @@
+/* Origin Page Styles */
+.origin-main {
+  padding-top: 8rem;
+  min-height: calc(100vh - 300px);
+}
+
+.origin-hero {
+  background: linear-gradient(to right, rgba(44, 74, 124, 0.05), rgba(44, 74, 124, 0.1));
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.origin-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.origin-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Cinzel', serif;
+  color: var(--primary-color);
+}
+
+.origin-hero p {
+  font-size: 1.2rem;
+  color: #4a5568;
+}
+
+.origin-content {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: var(--primary-color);
+  opacity: 0.3;
+}
+
+/* Add progress line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 0;
+  background: var(--secondary-color);
+  transition: height 0.3s ease-out;
+  z-index: 1;
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  width: 100%;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-out;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-date {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.timeline-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  margin-top: 3.5rem;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-right: 55%;
+  transform: translateX(-50px);
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: 55%;
+  transform: translateX(50px);
+}
+
+.timeline-item.visible:nth-child(odd) .timeline-content,
+.timeline-item.visible:nth-child(even) .timeline-content {
+  transform: translateX(0);
+}
+
+.timeline-content h3 {
+  color: var(--primary-color);
+  font-family: 'Cinzel', serif;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.timeline-content p {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url('../images/bg/Logo\ Png.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  top: 15px;
+  z-index: 1;
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.9);
+}
+
+.timeline-item.visible .timeline-content::before {
+  transform: scale(1.2);
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.9), 
+              0 0 15px rgba(228, 176, 74, 0.5);
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+  right: -65px;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+  left: -65px;
+}
+
+@media (max-width: 768px) {
+  .origin-main {
+    padding-top: 7rem;
+  }
+
+  .origin-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .timeline::before,
+  .timeline::after {
+    left: 30px;
+  }
+
+  .timeline-date {
+    left: 30px;
+    transform: translateX(-50%);
+  }
+
+  .timeline-content {
+    width: calc(100% - 60px);
+    margin-left: 60px !important;
+    margin-right: 0 !important;
+  }
+
+  .timeline-content::before {
+    left: -45px !important;
+    right: auto !important;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    transform: translateX(30px);
+  }
+
+  .timeline-item.visible:nth-child(odd) .timeline-content,
+  .timeline-item.visible:nth-child(even) .timeline-content {
+    transform: translateX(0);
+  }
+}
